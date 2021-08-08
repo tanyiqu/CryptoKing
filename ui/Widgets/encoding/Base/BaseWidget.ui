@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>BaseWidget</class>
+ <widget class="QWidget" name="BaseWidget">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -18,7 +18,7 @@
     <rect>
      <x>10</x>
      <y>90</y>
-     <width>291</width>
+     <width>301</width>
      <height>201</height>
     </rect>
    </property>
@@ -29,9 +29,9 @@
   <widget class="QPlainTextEdit" name="plainTextEdit_2">
    <property name="geometry">
     <rect>
-     <x>310</x>
+     <x>320</x>
      <y>90</y>
-     <width>291</width>
+     <width>301</width>
      <height>201</height>
     </rect>
    </property>

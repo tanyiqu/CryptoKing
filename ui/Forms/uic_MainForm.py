@@ -14,19 +14,19 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(718, 556)
+        Form.resize(1280, 850)
         self.pushButton = QtWidgets.QPushButton(Form)
         self.pushButton.setGeometry(QtCore.QRect(10, 10, 75, 23))
         self.pushButton.setObjectName("pushButton")
         self.stackedWidget = QtWidgets.QStackedWidget(Form)
-        self.stackedWidget.setGeometry(QtCore.QRect(120, 90, 481, 371))
+        self.stackedWidget.setGeometry(QtCore.QRect(240, 160, 1041, 691))
         self.stackedWidget.setObjectName("stackedWidget")
-        self.page = QtWidgets.QWidget()
-        self.page.setObjectName("page")
-        self.pushButton_2 = QtWidgets.QPushButton(self.page)
-        self.pushButton_2.setGeometry(QtCore.QRect(170, 160, 75, 23))
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.stackedWidget.addWidget(self.page)
+        self.HelloWidget = QtWidgets.QWidget()
+        self.HelloWidget.setObjectName("HelloWidget")
+        self.label = QtWidgets.QLabel(self.HelloWidget)
+        self.label.setGeometry(QtCore.QRect(50, 40, 551, 191))
+        self.label.setObjectName("label")
+        self.stackedWidget.addWidget(self.HelloWidget)
 
         self.retranslateUi(Form)
         self.stackedWidget.setCurrentIndex(0)
@@ -36,4 +36,4 @@ class Ui_Form(object):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "CryptoKing"))
         self.pushButton.setText(_translate("Form", "PushButton"))
-        self.pushButton_2.setText(_translate("Form", "PushButton"))
+        self.label.setText(_translate("Form", "hello"))
