@@ -16,13 +16,24 @@ class Ui_Form(object):
         Form.setObjectName("Form")
         Form.resize(718, 556)
         self.pushButton = QtWidgets.QPushButton(Form)
-        self.pushButton.setGeometry(QtCore.QRect(360, 340, 75, 23))
+        self.pushButton.setGeometry(QtCore.QRect(10, 10, 75, 23))
         self.pushButton.setObjectName("pushButton")
+        self.stackedWidget = QtWidgets.QStackedWidget(Form)
+        self.stackedWidget.setGeometry(QtCore.QRect(120, 90, 481, 371))
+        self.stackedWidget.setObjectName("stackedWidget")
+        self.page = QtWidgets.QWidget()
+        self.page.setObjectName("page")
+        self.pushButton_2 = QtWidgets.QPushButton(self.page)
+        self.pushButton_2.setGeometry(QtCore.QRect(170, 160, 75, 23))
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.stackedWidget.addWidget(self.page)
 
         self.retranslateUi(Form)
+        self.stackedWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
+        Form.setWindowTitle(_translate("Form", "CryptoKing"))
         self.pushButton.setText(_translate("Form", "PushButton"))
+        self.pushButton_2.setText(_translate("Form", "PushButton"))
