@@ -1,5 +1,6 @@
 from PyQt5.QtWidgets import QWidget
 from ui.Widgets.encoding.Base.uic_BaseWidget import Ui_BaseWidget
+import base64
 
 
 class BaseWidget(QWidget):
@@ -13,12 +14,24 @@ class BaseWidget(QWidget):
 
     # 
     def initFunc(self):
-        self.widget.pushButton.clicked.connect(self.encode)
+        self.widget.btn_encode.clicked.connect(self.encode)
+        self.widget.btn_decode.clicked.connect(self.decode)
         pass
 
     def encode(self):
-        text = self.widget.plainTextEdit.toPlainText()
-        self.widget.plainTextEdit_2.setPlainText(text * 2)
+        text = self.widget.txt_left.toPlainText()
+        print('text', text)
+        cipher = base64.b64encode(text.encode())
+        print('cipher', cipher)
+        self.widget.txt_right.setPlainText(cipher.decode())
+        pass
+
+    def decode(self):
+        text = self.widget.txt_left.toPlainText()
+        print(text)
+        cipher = base64.b64decode(text.encode())
+        print(cipher)
+        self.widget.txt_right.setPlainText(cipher.decode())
         pass
 
     pass
