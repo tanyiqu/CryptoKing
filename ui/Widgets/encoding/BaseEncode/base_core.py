@@ -74,5 +74,5 @@ def b16_decode(cipher: str):
 # print(b64_decode('MTIzNDUsss='))
 # print(b32_encode("阿萨德"))
 # print(b32_decode('5GML72EQVDS35NY=1'))
-print(b16_encode('12223数'))
-print(b16_decode('3132323233E695B0'))
+# print(b16_encode('12223数'))
+# print(b16_decode('3132323233E695B0'))
