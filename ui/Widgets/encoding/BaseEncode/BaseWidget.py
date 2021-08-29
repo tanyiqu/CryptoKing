@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import QWidget
-from ui.Widgets.encoding.Base.uic_BaseWidget import Ui_BaseWidget
-import base64
+from ui.Widgets.encoding.BaseEncode.uic_BaseWidget import Ui_BaseWidget
+import ui.Widgets.encoding.BaseEncode.base_core as base_core
 
 
 class BaseWidget(QWidget):
@@ -12,26 +12,24 @@ class BaseWidget(QWidget):
         self.initFunc()
         pass
 
-    # 
+    # 初始化
     def initFunc(self):
         self.widget.btn_encode.clicked.connect(self.encode)
         self.widget.btn_decode.clicked.connect(self.decode)
         pass
 
+    # 点击编码
     def encode(self):
         text = self.widget.txt_left.toPlainText()
-        print('text', text)
-        cipher = base64.b64encode(text.encode())
-        print('cipher', cipher)
-        self.widget.txt_right.setPlainText(cipher.decode())
+        cipher = base_core.b64_encode(text)
+        self.widget.txt_right.setPlainText(cipher)
         pass
 
+    # 点击解码
     def decode(self):
         text = self.widget.txt_left.toPlainText()
-        print(text)
-        cipher = base64.b64decode(text.encode())
-        print(cipher)
-        self.widget.txt_right.setPlainText(cipher.decode())
+        cipher = base_core.b64_decode(text)
+        self.widget.txt_right.setPlainText(cipher)
         pass
 
     pass

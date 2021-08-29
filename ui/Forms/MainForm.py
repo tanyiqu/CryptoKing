@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import QWidget
 from ui.Forms.uic_MainForm import Ui_Form
 
-from ui.Widgets.encoding.Base.BaseWidget import BaseWidget
+from ui.Widgets.encoding.BaseEncode.BaseWidget import BaseWidget
 
 
 class MainForm(QWidget):
