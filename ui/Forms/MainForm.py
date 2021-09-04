@@ -13,28 +13,22 @@ class MainForm(QWidget):
         self.mainForm = Ui_Form()
         self.mainForm.setupUi(self)
         self.initFunc()
-        self.mainForm.pushButton.setText(self.abc)
         pass
 
     def initFunc(self):
-        self.mainForm.pushButton.clicked.connect(self.click)
+        self.mainForm.btn_base_encode.clicked.connect(self.base_encode)
+        self.mainForm.btn_case_conversion.clicked.connect(self.case_conversion)
         pass
 
-    def click(self):
-        print(1)
+    def case_conversion(self):
+        print('字母大小写转换')
+        pass
 
-        # self.mainForm.widget = BaseWidget()
-        # self.ww = BaseWidget()
-
+    def base_encode(self):
+        print('Base编码')
         base = BaseWidget()
-
         self.mainForm.stackedWidget.addWidget(base)
-
-        # print(self.mainForm.stackedWidget.currentWidget)
-
         self.mainForm.stackedWidget.setCurrentWidget(base)
-
-
         pass
 
     pass
