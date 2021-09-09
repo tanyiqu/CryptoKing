@@ -1,6 +1,8 @@
 from PyQt5.QtWidgets import QWidget
 from ui.Forms.uic_MainForm import Ui_Form
 
+
+from ui.Widgets.Example.ExampleWidget import ExampleWidget
 from ui.Widgets.encoding.BaseEncode.BaseWidget import BaseWidget
 
 
@@ -24,6 +26,9 @@ class MainForm(QWidget):
 
     def example(self):
         print('测试组件')
+        ex = ExampleWidget()
+        self.mainForm.stackedWidget.addWidget(ex)
+        self.mainForm.stackedWidget.setCurrentWidget(ex)
         pass
 
     def case_conversion(self):
