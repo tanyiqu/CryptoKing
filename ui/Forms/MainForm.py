@@ -16,8 +16,14 @@ class MainForm(QWidget):
         pass
 
     def initFunc(self):
+        # 连接信号槽
+        self.mainForm.btn_example.clicked.connect(self.example)
         self.mainForm.btn_base_encode.clicked.connect(self.base_encode)
         self.mainForm.btn_case_conversion.clicked.connect(self.case_conversion)
+        pass
+
+    def example(self):
+        print('测试组件')
         pass
 
     def case_conversion(self):

@@ -94,9 +94,22 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(85, 255, 0);</string>
+      <string notr="true">background-color: #3296fa;</string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QPushButton" name="btn_example">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Example</string>
+        </property>
+       </widget>
+      </item>
       <item>
        <widget class="QPushButton" name="btn_case_conversion">
         <property name="minimumSize">
