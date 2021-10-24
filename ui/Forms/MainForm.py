@@ -61,6 +61,8 @@ class MainForm(QWidget):
         self.show()
 
     def mouseMoveEvent(self, e: QMouseEvent):
+        if (self._startPos is None) or (e.pos() is None):
+            return
         self._endPos = e.pos() - self._startPos
         self.move(self.pos() + self._endPos)
 
