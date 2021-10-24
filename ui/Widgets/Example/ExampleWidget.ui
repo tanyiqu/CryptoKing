@@ -31,20 +31,32 @@
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <widget class="QPlainTextEdit" name="txt_left">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>250</height>
-         </size>
+        <property name="styleSheet">
+         <string notr="true">QPlainTextEdit {
+font-size: 14px;
+color: #000;
+font: 11pt &quot;微软雅黑&quot;;
+background-color: #ffffff;
+border: 1px solid #cccccc;
+border-radius: 4px;
+-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+-webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+QPlainTextEdit:focus {
+border-color: #66afe9;
+outline: 0;
+-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}</string>
         </property>
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>250</height>
-         </size>
+        <property name="lineWrapMode">
+         <enum>QPlainTextEdit::WidgetWidth</enum>
         </property>
-        <property name="plainText">
-         <string/>
+        <property name="placeholderText">
+         <string>Input:</string>
         </property>
        </widget>
       </item>
@@ -62,8 +74,32 @@
           <height>250</height>
          </size>
         </property>
+        <property name="styleSheet">
+         <string notr="true">QPlainTextEdit {
+font-size: 14px;
+color: #000;
+font: 11pt &quot;微软雅黑&quot;;
+background-color: #ffffff;
+border: 1px solid #cccccc;
+border-radius: 4px;
+-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+-webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+QPlainTextEdit:focus {
+border-color: #66afe9;
+outline: 0;
+-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}</string>
+        </property>
         <property name="readOnly">
          <bool>true</bool>
+        </property>
+        <property name="placeholderText">
+         <string>Output:</string>
         </property>
        </widget>
       </item>
@@ -93,6 +129,31 @@
           <height>40</height>
          </size>
         </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #66afe9;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font: 11pt &quot;微软雅黑&quot;;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 2px;
+    vertical-align: middle;
+}
+
+QPushButton:hover {
+    opacity: 1;
+    right: 0;
+    background-color: #1976d2;
+}
+</string>
+        </property>
         <property name="text">
          <string>编码</string>
         </property>
@@ -111,6 +172,31 @@
           <width>90</width>
           <height>40</height>
          </size>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #66afe9;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font: 11pt &quot;微软雅黑&quot;;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 2px;
+    vertical-align: middle;
+}
+
+QPushButton:hover {
+    opacity: 1;
+    right: 0;
+    background-color: #1976d2;
+}
+</string>
         </property>
         <property name="text">
          <string>解码</string>
@@ -148,6 +234,12 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>txt_left</tabstop>
+  <tabstop>txt_right</tabstop>
+  <tabstop>btn_encode</tabstop>
+  <tabstop>btn_decode</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

@@ -24,14 +24,50 @@ class Ui_ExampleWidget(object):
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.widget)
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.txt_left = QtWidgets.QPlainTextEdit(self.widget)
-        self.txt_left.setMinimumSize(QtCore.QSize(0, 250))
-        self.txt_left.setMaximumSize(QtCore.QSize(16777215, 250))
-        self.txt_left.setPlainText("")
+        self.txt_left.setStyleSheet("QPlainTextEdit {\n"
+"font-size: 14px;\n"
+"color: #000;\n"
+"font: 11pt \"微软雅黑\";\n"
+"background-color: #ffffff;\n"
+"border: 1px solid #cccccc;\n"
+"border-radius: 4px;\n"
+"-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n"
+"box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n"
+"-webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;\n"
+"transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;\n"
+"}\n"
+"\n"
+"QPlainTextEdit:focus {\n"
+"border-color: #66afe9;\n"
+"outline: 0;\n"
+"-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);\n"
+"box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);\n"
+"}")
+        self.txt_left.setLineWrapMode(QtWidgets.QPlainTextEdit.WidgetWidth)
         self.txt_left.setObjectName("txt_left")
         self.horizontalLayout.addWidget(self.txt_left)
         self.txt_right = QtWidgets.QPlainTextEdit(self.widget)
         self.txt_right.setMinimumSize(QtCore.QSize(0, 250))
         self.txt_right.setMaximumSize(QtCore.QSize(16777215, 250))
+        self.txt_right.setStyleSheet("QPlainTextEdit {\n"
+"font-size: 14px;\n"
+"color: #000;\n"
+"font: 11pt \"微软雅黑\";\n"
+"background-color: #ffffff;\n"
+"border: 1px solid #cccccc;\n"
+"border-radius: 4px;\n"
+"-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n"
+"box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n"
+"-webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;\n"
+"transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;\n"
+"}\n"
+"\n"
+"QPlainTextEdit:focus {\n"
+"border-color: #66afe9;\n"
+"outline: 0;\n"
+"-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);\n"
+"box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);\n"
+"}")
         self.txt_right.setReadOnly(True)
         self.txt_right.setObjectName("txt_right")
         self.horizontalLayout.addWidget(self.txt_right)
@@ -44,11 +80,53 @@ class Ui_ExampleWidget(object):
         self.btn_encode = QtWidgets.QPushButton(self.widget_2)
         self.btn_encode.setMinimumSize(QtCore.QSize(90, 40))
         self.btn_encode.setMaximumSize(QtCore.QSize(90, 40))
+        self.btn_encode.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btn_encode.setStyleSheet("QPushButton {\n"
+"    display: inline-block;\n"
+"    border-radius: 4px;\n"
+"    background-color: #66afe9;\n"
+"    border: none;\n"
+"    color: #FFFFFF;\n"
+"    text-align: center;\n"
+"    font: 11pt \"微软雅黑\";\n"
+"    transition: all 0.5s;\n"
+"    cursor: pointer;\n"
+"    margin: 2px;\n"
+"    vertical-align: middle;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    opacity: 1;\n"
+"    right: 0;\n"
+"    background-color: #1976d2;\n"
+"}\n"
+"")
         self.btn_encode.setObjectName("btn_encode")
         self.horizontalLayout_2.addWidget(self.btn_encode)
         self.btn_decode = QtWidgets.QPushButton(self.widget_2)
         self.btn_decode.setMinimumSize(QtCore.QSize(90, 40))
         self.btn_decode.setMaximumSize(QtCore.QSize(90, 40))
+        self.btn_decode.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btn_decode.setStyleSheet("QPushButton {\n"
+"    display: inline-block;\n"
+"    border-radius: 4px;\n"
+"    background-color: #66afe9;\n"
+"    border: none;\n"
+"    color: #FFFFFF;\n"
+"    text-align: center;\n"
+"    font: 11pt \"微软雅黑\";\n"
+"    transition: all 0.5s;\n"
+"    cursor: pointer;\n"
+"    margin: 2px;\n"
+"    vertical-align: middle;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    opacity: 1;\n"
+"    right: 0;\n"
+"    background-color: #1976d2;\n"
+"}\n"
+"")
         self.btn_decode.setObjectName("btn_decode")
         self.horizontalLayout_2.addWidget(self.btn_decode)
         spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
@@ -59,9 +137,14 @@ class Ui_ExampleWidget(object):
 
         self.retranslateUi(ExampleWidget)
         QtCore.QMetaObject.connectSlotsByName(ExampleWidget)
+        ExampleWidget.setTabOrder(self.txt_left, self.txt_right)
+        ExampleWidget.setTabOrder(self.txt_right, self.btn_encode)
+        ExampleWidget.setTabOrder(self.btn_encode, self.btn_decode)
 
     def retranslateUi(self, ExampleWidget):
         _translate = QtCore.QCoreApplication.translate
         ExampleWidget.setWindowTitle(_translate("ExampleWidget", "Form"))
+        self.txt_left.setPlaceholderText(_translate("ExampleWidget", "Input:"))
+        self.txt_right.setPlaceholderText(_translate("ExampleWidget", "Output:"))
         self.btn_encode.setText(_translate("ExampleWidget", "编码"))
         self.btn_decode.setText(_translate("ExampleWidget", "解码"))

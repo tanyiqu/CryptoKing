@@ -15,6 +15,7 @@ class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(840, 580)
+        Form.setStyleSheet("")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(Form)
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_2.setSpacing(0)
@@ -38,7 +39,7 @@ class Ui_Form(object):
         self.widget = QtWidgets.QWidget(self.widget_2)
         self.widget.setMinimumSize(QtCore.QSize(200, 0))
         self.widget.setMaximumSize(QtCore.QSize(200, 16777215))
-        self.widget.setStyleSheet("background-color: #3296fa;")
+        self.widget.setStyleSheet("background-color: #66afe9;")
         self.widget.setObjectName("widget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.widget)
         self.verticalLayout.setObjectName("verticalLayout")

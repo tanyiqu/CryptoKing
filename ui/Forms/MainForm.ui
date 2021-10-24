@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>CryptoKing</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <property name="spacing">
     <number>0</number>
@@ -94,7 +97,7 @@
          </size>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: #3296fa;</string>
+         <string notr="true">background-color: #66afe9;</string>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout">
          <item>

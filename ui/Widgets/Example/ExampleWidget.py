@@ -1,6 +1,7 @@
 from PyQt5.QtWidgets import QWidget
 from ui.Widgets.Example.uic_ExampleWidget import Ui_ExampleWidget
 import ui.Widgets.Example.example as example
+from PyQt5.QtGui import QTextOption
 
 
 class ExampleWidget(QWidget):
@@ -15,6 +16,9 @@ class ExampleWidget(QWidget):
         # 初始化
 
     def initFunc(self):
+        # 设置文本不自动换行
+        # self.widget.txt_left.setWordWrapMode(QTextOption.WrapMode)
+
         self.widget.btn_encode.clicked.connect(self.encode)
         self.widget.btn_decode.clicked.connect(self.decode)
         pass
