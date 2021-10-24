@@ -105,6 +105,9 @@
              <height>35</height>
             </size>
            </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);</string>
+           </property>
            <property name="text">
             <string>Example</string>
            </property>
@@ -118,6 +121,9 @@
              <height>35</height>
             </size>
            </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);</string>
+           </property>
            <property name="text">
             <string>英文大小写转换</string>
            </property>
@@ -130,6 +136,9 @@
              <width>0</width>
              <height>35</height>
             </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);</string>
            </property>
            <property name="text">
             <string>Base编码</string>
