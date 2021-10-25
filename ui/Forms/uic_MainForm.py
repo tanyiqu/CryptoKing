@@ -16,11 +16,8 @@ class Ui_Form(object):
         Form.setObjectName("Form")
         Form.resize(840, 580)
         Form.setStyleSheet("")
-        self.verticalLayout_2 = QtWidgets.QVBoxLayout(Form)
-        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_2.setSpacing(0)
-        self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.frame = QtWidgets.QFrame(Form)
+        self.frame.setGeometry(QtCore.QRect(0, 0, 840, 100))
         self.frame.setMinimumSize(QtCore.QSize(0, 100))
         self.frame.setStyleSheet("background-color: rgb(255, 170, 255);")
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -29,8 +26,8 @@ class Ui_Form(object):
         self.btn_close = QtWidgets.QPushButton(self.frame)
         self.btn_close.setGeometry(QtCore.QRect(760, 10, 75, 23))
         self.btn_close.setObjectName("btn_close")
-        self.verticalLayout_2.addWidget(self.frame)
         self.widget_2 = QtWidgets.QWidget(Form)
+        self.widget_2.setGeometry(QtCore.QRect(0, 100, 840, 480))
         self.widget_2.setObjectName("widget_2")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.widget_2)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
@@ -39,27 +36,142 @@ class Ui_Form(object):
         self.widget = QtWidgets.QWidget(self.widget_2)
         self.widget.setMinimumSize(QtCore.QSize(200, 0))
         self.widget.setMaximumSize(QtCore.QSize(200, 16777215))
-        self.widget.setStyleSheet("background-color: #66afe9;")
+        self.widget.setStyleSheet("")
         self.widget.setObjectName("widget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.widget)
         self.verticalLayout.setObjectName("verticalLayout")
-        self.btn_example = QtWidgets.QPushButton(self.widget)
+        self.toolBox = QtWidgets.QToolBox(self.widget)
+        self.toolBox.setStyleSheet("*{\n"
+"    color: #000;\n"
+"}\n"
+"\n"
+"QPushButton {\n"
+"    display: inline-block;\n"
+"    border-radius: 4px;\n"
+"    background-color: #66afe9;\n"
+"    border: none;\n"
+"    color: #FFFFFF;\n"
+"    text-align: center;\n"
+"    font: 11pt \"微软雅黑\";\n"
+"    transition: all 0.5s;\n"
+"    cursor: pointer;\n"
+"    margin: 2px;\n"
+"    vertical-align: middle;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    opacity: 1;\n"
+"    right: 0;\n"
+"    background-color: #1976d2;\n"
+"}\n"
+" ")
+        self.toolBox.setObjectName("toolBox")
+        self.page_2 = QtWidgets.QWidget()
+        self.page_2.setGeometry(QtCore.QRect(0, 0, 182, 384))
+        self.page_2.setObjectName("page_2")
+        self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.page_2)
+        self.verticalLayout_4.setContentsMargins(-1, 4, -1, 4)
+        self.verticalLayout_4.setObjectName("verticalLayout_4")
+        self.btn_example = QtWidgets.QPushButton(self.page_2)
         self.btn_example.setMinimumSize(QtCore.QSize(0, 35))
-        self.btn_example.setStyleSheet("color: rgb(0, 0, 0);")
+        self.btn_example.setStyleSheet("QPushButton {\n"
+"    display: inline-block;\n"
+"    border-radius: 4px;\n"
+"    background-color: #66afe9;\n"
+"    border: none;\n"
+"    color: #FFFFFF;\n"
+"    text-align: center;\n"
+"    font: 11pt \"微软雅黑\";\n"
+"    transition: all 0.5s;\n"
+"    cursor: pointer;\n"
+"    margin: 2px;\n"
+"    vertical-align: middle;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    opacity: 1;\n"
+"    right: 0;\n"
+"    background-color: #1976d2;\n"
+"}\n"
+"")
         self.btn_example.setObjectName("btn_example")
-        self.verticalLayout.addWidget(self.btn_example)
-        self.btn_case_conversion = QtWidgets.QPushButton(self.widget)
+        self.verticalLayout_4.addWidget(self.btn_example)
+        self.btn_case_conversion = QtWidgets.QPushButton(self.page_2)
         self.btn_case_conversion.setMinimumSize(QtCore.QSize(0, 35))
-        self.btn_case_conversion.setStyleSheet("color: rgb(0, 0, 0);")
+        self.btn_case_conversion.setStyleSheet("")
         self.btn_case_conversion.setObjectName("btn_case_conversion")
-        self.verticalLayout.addWidget(self.btn_case_conversion)
-        self.btn_base_encode = QtWidgets.QPushButton(self.widget)
+        self.verticalLayout_4.addWidget(self.btn_case_conversion)
+        self.btn_base_encode = QtWidgets.QPushButton(self.page_2)
         self.btn_base_encode.setMinimumSize(QtCore.QSize(0, 35))
-        self.btn_base_encode.setStyleSheet("color: rgb(0, 0, 0);")
+        self.btn_base_encode.setStyleSheet("")
         self.btn_base_encode.setObjectName("btn_base_encode")
-        self.verticalLayout.addWidget(self.btn_base_encode)
+        self.verticalLayout_4.addWidget(self.btn_base_encode)
         spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout.addItem(spacerItem)
+        self.verticalLayout_4.addItem(spacerItem)
+        self.toolBox.addItem(self.page_2, "")
+        self.page = QtWidgets.QWidget()
+        self.page.setGeometry(QtCore.QRect(0, 0, 165, 428))
+        self.page.setObjectName("page")
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.page)
+        self.verticalLayout_3.setContentsMargins(-1, 4, -1, 4)
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.pushButton = QtWidgets.QPushButton(self.page)
+        self.pushButton.setObjectName("pushButton")
+        self.verticalLayout_3.addWidget(self.pushButton)
+        self.pushButton_2 = QtWidgets.QPushButton(self.page)
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.verticalLayout_3.addWidget(self.pushButton_2)
+        self.pushButton_3 = QtWidgets.QPushButton(self.page)
+        self.pushButton_3.setObjectName("pushButton_3")
+        self.verticalLayout_3.addWidget(self.pushButton_3)
+        self.pushButton_13 = QtWidgets.QPushButton(self.page)
+        self.pushButton_13.setObjectName("pushButton_13")
+        self.verticalLayout_3.addWidget(self.pushButton_13)
+        self.pushButton_15 = QtWidgets.QPushButton(self.page)
+        self.pushButton_15.setObjectName("pushButton_15")
+        self.verticalLayout_3.addWidget(self.pushButton_15)
+        self.pushButton_14 = QtWidgets.QPushButton(self.page)
+        self.pushButton_14.setObjectName("pushButton_14")
+        self.verticalLayout_3.addWidget(self.pushButton_14)
+        self.pushButton_11 = QtWidgets.QPushButton(self.page)
+        self.pushButton_11.setObjectName("pushButton_11")
+        self.verticalLayout_3.addWidget(self.pushButton_11)
+        self.pushButton_12 = QtWidgets.QPushButton(self.page)
+        self.pushButton_12.setObjectName("pushButton_12")
+        self.verticalLayout_3.addWidget(self.pushButton_12)
+        self.pushButton_7 = QtWidgets.QPushButton(self.page)
+        self.pushButton_7.setObjectName("pushButton_7")
+        self.verticalLayout_3.addWidget(self.pushButton_7)
+        self.pushButton_10 = QtWidgets.QPushButton(self.page)
+        self.pushButton_10.setObjectName("pushButton_10")
+        self.verticalLayout_3.addWidget(self.pushButton_10)
+        self.pushButton_9 = QtWidgets.QPushButton(self.page)
+        self.pushButton_9.setObjectName("pushButton_9")
+        self.verticalLayout_3.addWidget(self.pushButton_9)
+        self.pushButton_8 = QtWidgets.QPushButton(self.page)
+        self.pushButton_8.setObjectName("pushButton_8")
+        self.verticalLayout_3.addWidget(self.pushButton_8)
+        self.pushButton_4 = QtWidgets.QPushButton(self.page)
+        self.pushButton_4.setObjectName("pushButton_4")
+        self.verticalLayout_3.addWidget(self.pushButton_4)
+        self.pushButton_5 = QtWidgets.QPushButton(self.page)
+        self.pushButton_5.setObjectName("pushButton_5")
+        self.verticalLayout_3.addWidget(self.pushButton_5)
+        spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_3.addItem(spacerItem1)
+        self.toolBox.addItem(self.page, "")
+        self.page_3 = QtWidgets.QWidget()
+        self.page_3.setObjectName("page_3")
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.page_3)
+        self.verticalLayout_2.setContentsMargins(-1, 4, -1, 4)
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.pushButton_6 = QtWidgets.QPushButton(self.page_3)
+        self.pushButton_6.setObjectName("pushButton_6")
+        self.verticalLayout_2.addWidget(self.pushButton_6)
+        spacerItem2 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_2.addItem(spacerItem2)
+        self.toolBox.addItem(self.page_3, "")
+        self.verticalLayout.addWidget(self.toolBox)
         self.horizontalLayout.addWidget(self.widget)
         self.stackedWidget = QtWidgets.QStackedWidget(self.widget_2)
         self.stackedWidget.setMinimumSize(QtCore.QSize(640, 480))
@@ -69,9 +181,9 @@ class Ui_Form(object):
         self.HelloWidget.setObjectName("HelloWidget")
         self.stackedWidget.addWidget(self.HelloWidget)
         self.horizontalLayout.addWidget(self.stackedWidget)
-        self.verticalLayout_2.addWidget(self.widget_2)
 
         self.retranslateUi(Form)
+        self.toolBox.setCurrentIndex(0)
         self.stackedWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
@@ -82,3 +194,21 @@ class Ui_Form(object):
         self.btn_example.setText(_translate("Form", "Example"))
         self.btn_case_conversion.setText(_translate("Form", "英文大小写转换"))
         self.btn_base_encode.setText(_translate("Form", "Base编码"))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.page_2), _translate("Form", "编码转换"))
+        self.pushButton.setText(_translate("Form", "PushButton"))
+        self.pushButton_2.setText(_translate("Form", "PushButton"))
+        self.pushButton_3.setText(_translate("Form", "PushButton"))
+        self.pushButton_13.setText(_translate("Form", "PushButton"))
+        self.pushButton_15.setText(_translate("Form", "PushButton"))
+        self.pushButton_14.setText(_translate("Form", "PushButton"))
+        self.pushButton_11.setText(_translate("Form", "PushButton"))
+        self.pushButton_12.setText(_translate("Form", "PushButton"))
+        self.pushButton_7.setText(_translate("Form", "PushButton"))
+        self.pushButton_10.setText(_translate("Form", "PushButton"))
+        self.pushButton_9.setText(_translate("Form", "PushButton"))
+        self.pushButton_8.setText(_translate("Form", "PushButton"))
+        self.pushButton_4.setText(_translate("Form", "PushButton"))
+        self.pushButton_5.setText(_translate("Form", "PushButton"))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.page), _translate("Form", "古典密码"))
+        self.pushButton_6.setText(_translate("Form", "PushButton"))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.page_3), _translate("Form", "其他"))
