@@ -15,17 +15,29 @@ class MainForm(QWidget):
         super().__init__()
         self.mainForm = Ui_Form()
         self.mainForm.setupUi(self)
-        self.initFunc()
+        # 初始化外观
+        self.init_appearance()
+        # 功能操作
+        self.init_func()
+        pass
+
+    def init_appearance(self):
         # 设置窗口无边框
         self.setWindowFlags(Qt.FramelessWindowHint)
 
-        # 实现窗口拖动
-        self.setMove()
+        # 按钮样式
+        self.mainForm.btn_close.setStyleSheet("QPushButton{border-image: url(resource/imgs/close_normal.png)}"
+                                              "QPushButton:hover{border-image: url(resource/imgs/close_hover.png)}")
+        self.mainForm.btn_min.setStyleSheet("QPushButton{border-image: url(resource/imgs/min_normal.png)}"
+                                            "QPushButton:hover{border-image: url(resource/imgs/min_hover.png)}")
         pass
 
-    def initFunc(self):
+    def init_func(self):
         # 关闭按钮
         self.mainForm.btn_close.clicked.connect(lambda: exit(0))
+
+        # 实现窗口拖动
+        self.set_move()
 
         # 连接信号槽
         self.mainForm.btn_example.clicked.connect(self.example)
@@ -33,6 +45,7 @@ class MainForm(QWidget):
         self.mainForm.btn_case_conversion.clicked.connect(self.case_conversion)
         pass
 
+    # ##### 菜单  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
     def example(self):
         print('测试组件')
         ex = ExampleWidget()
@@ -51,12 +64,14 @@ class MainForm(QWidget):
         self.mainForm.stackedWidget.setCurrentWidget(base)
         pass
 
+    # ##### 菜单  ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+
     # ##### 实现窗口拖动  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
     _startPos = None
     _endPos = None
     _isTracking = False
 
-    def setMove(self):
+    def set_move(self):
         self.setWindowFlags(Qt.FramelessWindowHint)  # 无边框
         self.show()
 
