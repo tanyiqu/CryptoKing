@@ -6,6 +6,7 @@ from PyQt5.QtGui import QMouseEvent
 
 from ui.Widgets.Example.ExampleWidget import ExampleWidget
 from ui.Widgets.encoding.BaseEncode.BaseWidget import BaseWidget
+from ui.Widgets.encoding.CaseConversion.CaseConversionWidget import CaseConversionWidget
 
 
 class MainForm(QWidget):
@@ -55,6 +56,9 @@ class MainForm(QWidget):
 
     def case_conversion(self):
         print('字母大小写转换')
+        cc = CaseConversionWidget()
+        self.mainForm.stackedWidget.addWidget(cc)
+        self.mainForm.stackedWidget.setCurrentWidget(cc)
         pass
 
     def base_encode(self):

@@ -23,5 +23,7 @@ pip3 install PyQt5==5.15.4 PyQt5-Qt5==5.15.2 PyQt5-sip==12.9.0 -i https://pypi.t
 - 古典密码
   - 凯撒密码
   - 栅栏密码
+- 
 - 其他
+  - MD系列
   - 二进制转文本
