@@ -414,9 +414,15 @@ QPushButton:hover {
               <number>4</number>
              </property>
              <item>
-              <widget class="QPushButton" name="pushButton_6">
+              <widget class="QPushButton" name="btn_md">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>35</height>
+                </size>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>MD系列</string>
                </property>
               </widget>
              </item>

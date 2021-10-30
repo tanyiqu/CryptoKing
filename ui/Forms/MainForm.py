@@ -8,6 +8,9 @@ from ui.Widgets.Example.ExampleWidget import ExampleWidget
 from ui.Widgets.encoding.BaseEncode.BaseWidget import BaseWidget
 from ui.Widgets.encoding.CaseConversion.CaseConversionWidget import CaseConversionWidget
 
+from ui.Widgets.Other.MD.MDWidget import MDWidget
+
+
 
 class MainForm(QWidget):
     # 在此定义变量
@@ -44,6 +47,7 @@ class MainForm(QWidget):
         self.mainForm.btn_example.clicked.connect(self.example)
         self.mainForm.btn_base_encode.clicked.connect(self.base_encode)
         self.mainForm.btn_case_conversion.clicked.connect(self.case_conversion)
+        self.mainForm.btn_md.clicked.connect(self.md)
         pass
 
     # ##### 菜单  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
@@ -59,6 +63,13 @@ class MainForm(QWidget):
         cc = CaseConversionWidget()
         self.mainForm.stackedWidget.addWidget(cc)
         self.mainForm.stackedWidget.setCurrentWidget(cc)
+        pass
+
+    def md(self):
+        print('字母大小写转换')
+        md = MDWidget()
+        self.mainForm.stackedWidget.addWidget(md)
+        self.mainForm.stackedWidget.setCurrentWidget(md)
         pass
 
     def base_encode(self):

@@ -11,14 +11,14 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_ExampleWidget(object):
-    def setupUi(self, ExampleWidget):
-        ExampleWidget.setObjectName("ExampleWidget")
-        ExampleWidget.resize(758, 513)
-        ExampleWidget.setMinimumSize(QtCore.QSize(90, 40))
-        self.verticalLayout = QtWidgets.QVBoxLayout(ExampleWidget)
+class Ui_MDWidget(object):
+    def setupUi(self, MDWidget):
+        MDWidget.setObjectName("MDWidget")
+        MDWidget.resize(758, 513)
+        MDWidget.setMinimumSize(QtCore.QSize(90, 40))
+        self.verticalLayout = QtWidgets.QVBoxLayout(MDWidget)
         self.verticalLayout.setObjectName("verticalLayout")
-        self.widget = QtWidgets.QWidget(ExampleWidget)
+        self.widget = QtWidgets.QWidget(MDWidget)
         self.widget.setMaximumSize(QtCore.QSize(16777215, 280))
         self.widget.setObjectName("widget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.widget)
@@ -72,7 +72,7 @@ class Ui_ExampleWidget(object):
         self.txt_right.setObjectName("txt_right")
         self.horizontalLayout.addWidget(self.txt_right)
         self.verticalLayout.addWidget(self.widget)
-        self.widget_2 = QtWidgets.QWidget(ExampleWidget)
+        self.widget_2 = QtWidgets.QWidget(MDWidget)
         self.widget_2.setMaximumSize(QtCore.QSize(1111111, 58))
         self.widget_2.setObjectName("widget_2")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.widget_2)
@@ -135,16 +135,16 @@ class Ui_ExampleWidget(object):
         spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout.addItem(spacerItem1)
 
-        self.retranslateUi(ExampleWidget)
-        QtCore.QMetaObject.connectSlotsByName(ExampleWidget)
-        ExampleWidget.setTabOrder(self.txt_left, self.txt_right)
-        ExampleWidget.setTabOrder(self.txt_right, self.btn_encode)
-        ExampleWidget.setTabOrder(self.btn_encode, self.btn_decode)
+        self.retranslateUi(MDWidget)
+        QtCore.QMetaObject.connectSlotsByName(MDWidget)
+        MDWidget.setTabOrder(self.txt_left, self.txt_right)
+        MDWidget.setTabOrder(self.txt_right, self.btn_encode)
+        MDWidget.setTabOrder(self.btn_encode, self.btn_decode)
 
-    def retranslateUi(self, ExampleWidget):
+    def retranslateUi(self, MDWidget):
         _translate = QtCore.QCoreApplication.translate
-        ExampleWidget.setWindowTitle(_translate("ExampleWidget", "Form"))
-        self.txt_left.setPlaceholderText(_translate("ExampleWidget", "Input:"))
-        self.txt_right.setPlaceholderText(_translate("ExampleWidget", "Output:"))
-        self.btn_encode.setText(_translate("ExampleWidget", "编码"))
-        self.btn_decode.setText(_translate("ExampleWidget", "解码"))
+        MDWidget.setWindowTitle(_translate("MDWidget", "Form"))
+        self.txt_left.setPlaceholderText(_translate("MDWidget", "Input:"))
+        self.txt_right.setPlaceholderText(_translate("MDWidget", "Output:"))
+        self.btn_encode.setText(_translate("MDWidget", "编码"))
+        self.btn_decode.setText(_translate("MDWidget", "解码"))
