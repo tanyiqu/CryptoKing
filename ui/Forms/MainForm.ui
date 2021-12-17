@@ -138,15 +138,12 @@ color: #fff;</string>
 }
 
 QPushButton {
-    display: inline-block;
     border-radius: 4px;
     background-color: #66afe9;
     border: none;
     color: #FFFFFF;
     text-align: center;
     font: 11pt &quot;微软雅黑&quot;;
-    transition: all 0.5s;
-    cursor: pointer;
     margin: 2px;
     vertical-align: middle;
 }
@@ -189,26 +186,7 @@ QPushButton:hover {
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">QPushButton {
-    display: inline-block;
-    border-radius: 4px;
-    background-color: #66afe9;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    font: 11pt &quot;微软雅黑&quot;;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 2px;
-    vertical-align: middle;
-}
-
-QPushButton:hover {
-    opacity: 1;
-    right: 0;
-    background-color: #1976d2;
-}
-</string>
+                <string notr="true"/>
                </property>
                <property name="text">
                 <string>Example</string>

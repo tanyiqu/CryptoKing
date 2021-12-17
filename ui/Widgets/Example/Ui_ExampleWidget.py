@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'x:\Python\.Project\CryptoKing - 副本\ui\Widgets\Example\ExampleWidget.ui'
+# Form implementation generated from reading ui file 'x:\Python\.Project\CryptoKing\ui\Widgets\Example\ExampleWidget.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -31,17 +31,11 @@ class Ui_ExampleWidget(object):
 "background-color: #ffffff;\n"
 "border: 1px solid #cccccc;\n"
 "border-radius: 4px;\n"
-"-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n"
-"box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n"
-"-webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;\n"
-"transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;\n"
 "}\n"
 "\n"
 "QPlainTextEdit:focus {\n"
 "border-color: #66afe9;\n"
 "outline: 0;\n"
-"-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);\n"
-"box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);\n"
 "}")
         self.txt_left.setLineWrapMode(QtWidgets.QPlainTextEdit.WidgetWidth)
         self.txt_left.setObjectName("txt_left")
@@ -56,17 +50,11 @@ class Ui_ExampleWidget(object):
 "background-color: #ffffff;\n"
 "border: 1px solid #cccccc;\n"
 "border-radius: 4px;\n"
-"-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n"
-"box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n"
-"-webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;\n"
-"transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;\n"
 "}\n"
 "\n"
 "QPlainTextEdit:focus {\n"
 "border-color: #66afe9;\n"
 "outline: 0;\n"
-"-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);\n"
-"box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);\n"
 "}")
         self.txt_right.setReadOnly(True)
         self.txt_right.setObjectName("txt_right")
@@ -82,15 +70,12 @@ class Ui_ExampleWidget(object):
         self.btn_encode.setMaximumSize(QtCore.QSize(90, 40))
         self.btn_encode.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.btn_encode.setStyleSheet("QPushButton {\n"
-"    display: inline-block;\n"
 "    border-radius: 4px;\n"
 "    background-color: #66afe9;\n"
 "    border: none;\n"
 "    color: #FFFFFF;\n"
 "    text-align: center;\n"
 "    font: 11pt \"微软雅黑\";\n"
-"    transition: all 0.5s;\n"
-"    cursor: pointer;\n"
 "    margin: 2px;\n"
 "    vertical-align: middle;\n"
 "}\n"
@@ -108,15 +93,12 @@ class Ui_ExampleWidget(object):
         self.btn_decode.setMaximumSize(QtCore.QSize(90, 40))
         self.btn_decode.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.btn_decode.setStyleSheet("QPushButton {\n"
-"    display: inline-block;\n"
 "    border-radius: 4px;\n"
 "    background-color: #66afe9;\n"
 "    border: none;\n"
 "    color: #FFFFFF;\n"
 "    text-align: center;\n"
 "    font: 11pt \"微软雅黑\";\n"
-"    transition: all 0.5s;\n"
-"    cursor: pointer;\n"
 "    margin: 2px;\n"
 "    vertical-align: middle;\n"
 "}\n"

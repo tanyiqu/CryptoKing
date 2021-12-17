@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'x:\Python\.Project\CryptoKing - 副本\ui\Forms\MainForm.ui'
+# Form implementation generated from reading ui file 'x:\Python\.Project\CryptoKing\ui\Forms\MainForm.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -59,15 +59,12 @@ class Ui_Form(object):
 "}\n"
 "\n"
 "QPushButton {\n"
-"    display: inline-block;\n"
 "    border-radius: 4px;\n"
 "    background-color: #66afe9;\n"
 "    border: none;\n"
 "    color: #FFFFFF;\n"
 "    text-align: center;\n"
 "    font: 11pt \"微软雅黑\";\n"
-"    transition: all 0.5s;\n"
-"    cursor: pointer;\n"
 "    margin: 2px;\n"
 "    vertical-align: middle;\n"
 "}\n"
@@ -87,26 +84,7 @@ class Ui_Form(object):
         self.verticalLayout_4.setObjectName("verticalLayout_4")
         self.btn_example = QtWidgets.QPushButton(self.page_2)
         self.btn_example.setMinimumSize(QtCore.QSize(0, 35))
-        self.btn_example.setStyleSheet("QPushButton {\n"
-"    display: inline-block;\n"
-"    border-radius: 4px;\n"
-"    background-color: #66afe9;\n"
-"    border: none;\n"
-"    color: #FFFFFF;\n"
-"    text-align: center;\n"
-"    font: 11pt \"微软雅黑\";\n"
-"    transition: all 0.5s;\n"
-"    cursor: pointer;\n"
-"    margin: 2px;\n"
-"    vertical-align: middle;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    opacity: 1;\n"
-"    right: 0;\n"
-"    background-color: #1976d2;\n"
-"}\n"
-"")
+        self.btn_example.setStyleSheet("")
         self.btn_example.setObjectName("btn_example")
         self.verticalLayout_4.addWidget(self.btn_example)
         self.btn_case_conversion = QtWidgets.QPushButton(self.page_2)
