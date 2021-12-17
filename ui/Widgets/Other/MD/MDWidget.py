@@ -1,5 +1,5 @@
 from PyQt5.QtWidgets import QWidget
-from ui.Widgets.Other.MD.uic_MDWidget import Ui_MDWidget
+from ui.Widgets.Other.MD.Ui_MDWidget import Ui_MDWidget
 import ui.Widgets.Other.MD.core as core
 
 class MDWidget(QWidget):

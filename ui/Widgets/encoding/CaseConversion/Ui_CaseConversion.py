@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'CaseConversion.ui'
+# Form implementation generated from reading ui file 'x:\Python\.Project\CryptoKing - 副本\ui\Widgets\encoding\CaseConversion\CaseConversion.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #

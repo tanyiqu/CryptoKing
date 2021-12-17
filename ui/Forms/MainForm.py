@@ -1,5 +1,5 @@
 from PyQt5.QtWidgets import QWidget
-from ui.Forms.uic_MainForm import Ui_Form
+from ui.Forms.Ui_MainForm import Ui_Form
 from PyQt5.QtCore import Qt
 from PyQt5.QtCore import QPoint
 from PyQt5.QtGui import QMouseEvent

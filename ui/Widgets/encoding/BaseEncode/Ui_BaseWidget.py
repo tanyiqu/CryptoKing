@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'BaseWidget.ui'
+# Form implementation generated from reading ui file 'x:\Python\.Project\CryptoKing - 副本\ui\Widgets\encoding\BaseEncode\BaseWidget.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #

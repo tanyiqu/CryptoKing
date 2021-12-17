@@ -1,5 +1,5 @@
 from PyQt5.QtWidgets import QWidget
-from ui.Widgets.Example.uic_ExampleWidget import Ui_ExampleWidget
+from ui.Widgets.Example.Ui_ExampleWidget import Ui_ExampleWidget
 import ui.Widgets.Example.example as example
 from PyQt5.QtGui import QTextOption
 
