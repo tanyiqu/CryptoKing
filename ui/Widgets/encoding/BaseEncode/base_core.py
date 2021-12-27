@@ -14,6 +14,10 @@ def b64_encode(text: str):
 
 def b64_decode(cipher: str):
     text = 'error base64'
+    # 补齐为 4的倍数
+    while len(cipher) % 4 != 0:
+        cipher += '='
+        pass
     try:
         text = str(base64.b64decode(cipher.encode()).decode('utf-8'))
         pass
@@ -37,6 +41,10 @@ def b32_encode(text: str):
 
 def b32_decode(cipher: str):
     text = 'error base32'
+    # 补齐为 8的倍数
+    while len(cipher) % 8 != 0:
+        cipher += '='
+        pass
     try:
         text = str(base64.b32decode(cipher.encode()).decode('utf-8'))
         pass

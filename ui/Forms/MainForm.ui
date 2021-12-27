@@ -75,7 +75,7 @@
        <string/>
       </property>
      </widget>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="lbl_app_name">
       <property name="geometry">
        <rect>
         <x>12</x>
@@ -142,6 +142,8 @@ QPushButton {
     background-color: #66afe9;
     border: none;
     color: #FFFFFF;
+    height:35px;
+    min-height:35px;
     text-align: center;
     font: 11pt &quot;微软雅黑&quot;;
     margin: 2px;
@@ -164,7 +166,7 @@ QPushButton:hover {
               <x>0</x>
               <y>0</y>
               <width>182</width>
-              <height>404</height>
+              <height>378</height>
              </rect>
             </property>
             <attribute name="label">
@@ -182,7 +184,7 @@ QPushButton:hover {
                <property name="minimumSize">
                 <size>
                  <width>0</width>
-                 <height>35</height>
+                 <height>39</height>
                 </size>
                </property>
                <property name="styleSheet">
@@ -198,7 +200,7 @@ QPushButton:hover {
                <property name="minimumSize">
                 <size>
                  <width>0</width>
-                 <height>35</height>
+                 <height>39</height>
                 </size>
                </property>
                <property name="styleSheet">
@@ -214,7 +216,7 @@ QPushButton:hover {
                <property name="minimumSize">
                 <size>
                  <width>0</width>
-                 <height>35</height>
+                 <height>39</height>
                 </size>
                </property>
                <property name="styleSheet">
@@ -245,8 +247,8 @@ QPushButton:hover {
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>165</width>
-              <height>428</height>
+              <width>182</width>
+              <height>378</height>
              </rect>
             </property>
             <attribute name="label">
@@ -261,41 +263,9 @@ QPushButton:hover {
              </property>
              <item>
               <widget class="QPushButton" name="pushButton">
-               <property name="text">
-                <string>PushButton</string>
+               <property name="styleSheet">
+                <string notr="true"/>
                </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="pushButton_2">
-               <property name="text">
-                <string>PushButton</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="pushButton_3">
-               <property name="text">
-                <string>PushButton</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="pushButton_13">
-               <property name="text">
-                <string>PushButton</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="pushButton_15">
-               <property name="text">
-                <string>PushButton</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="pushButton_14">
                <property name="text">
                 <string>PushButton</string>
                </property>
@@ -303,55 +273,6 @@ QPushButton:hover {
              </item>
              <item>
               <widget class="QPushButton" name="pushButton_11">
-               <property name="text">
-                <string>PushButton</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="pushButton_12">
-               <property name="text">
-                <string>PushButton</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="pushButton_7">
-               <property name="text">
-                <string>PushButton</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="pushButton_10">
-               <property name="text">
-                <string>PushButton</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="pushButton_9">
-               <property name="text">
-                <string>PushButton</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="pushButton_8">
-               <property name="text">
-                <string>PushButton</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="pushButton_4">
-               <property name="text">
-                <string>PushButton</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="pushButton_5">
                <property name="text">
                 <string>PushButton</string>
                </property>
@@ -372,13 +293,53 @@ QPushButton:hover {
              </item>
             </layout>
            </widget>
+           <widget class="QWidget" name="page_4">
+            <attribute name="label">
+             <string>Hash函数</string>
+            </attribute>
+            <layout class="QVBoxLayout" name="verticalLayout_6">
+             <item>
+              <widget class="QPushButton" name="btn_md5">
+               <property name="text">
+                <string>MD5</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btn_md">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>39</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>MD系列</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_4">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
            <widget class="QWidget" name="page_3">
             <property name="geometry">
              <rect>
               <x>0</x>
               <y>0</y>
               <width>182</width>
-              <height>404</height>
+              <height>378</height>
              </rect>
             </property>
             <attribute name="label">
@@ -392,15 +353,9 @@ QPushButton:hover {
               <number>4</number>
              </property>
              <item>
-              <widget class="QPushButton" name="btn_md">
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>35</height>
-                </size>
-               </property>
+              <widget class="QPushButton" name="pushButton_6">
                <property name="text">
-                <string>MD系列</string>
+                <string>PushButton</string>
                </property>
               </widget>
              </item>
