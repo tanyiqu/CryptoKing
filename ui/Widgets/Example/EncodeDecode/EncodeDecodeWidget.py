@@ -1,14 +1,14 @@
 from PyQt5.QtWidgets import QWidget
-from ui.Widgets.encoding.CaseConversion.Ui_CaseConversion import Ui_CaseConversion
+from ui.Widgets.Example.EncodeDecode.Ui_EncodeDecodeWidget import Ui_EncodeDecodeWidget
+import ui.Widgets.Example.EncodeDecode.example as example
+from PyQt5.QtGui import QTextOption
 
-import ui.Widgets.encoding.CaseConversion.core as core
 
-
-class CaseConversionWidget(QWidget):
+class EncodeDecodeWidget(QWidget):
 
     def __init__(self):
         super().__init__()
-        self.widget = Ui_CaseConversion()
+        self.widget = Ui_EncodeDecodeWidget()
         self.widget.setupUi(self)
         self.initFunc()
         pass
@@ -19,26 +19,24 @@ class CaseConversionWidget(QWidget):
         # 设置文本不自动换行
         # self.widget.txt_left.setWordWrapMode(QTextOption.WrapMode)
 
-        self.widget.btn_upper.clicked.connect(self.upper)
-        self.widget.btn_lower.clicked.connect(self.lower)
+        self.widget.btn_encode.clicked.connect(self.encode)
+        self.widget.btn_decode.clicked.connect(self.decode)
         pass
 
-    # 大写
-    def upper(self):
+    def encode(self):
         # print('encode')
         # 获取文本框中的内容
         txt_left = self.widget.txt_left.toPlainText()
-        txt_right = core.upper(txt_left)
+        txt_right = example.encode(txt_left)
         print(txt_right)
         self.widget.txt_right.setPlainText(txt_right)
         pass
 
-    # 小写
-    def lower(self):
+    def decode(self):
         print('decode')
         # 获取文本框中的内容
         txt_left = self.widget.txt_left.toPlainText()
-        txt_right = core.lower(txt_left)
+        txt_right = example.decode(txt_left)
         print(txt_right)
         self.widget.txt_right.setPlainText(txt_right)
         pass

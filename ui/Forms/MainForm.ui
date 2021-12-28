@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>840</width>
-    <height>580</height>
+    <width>880</width>
+    <height>620</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -52,11 +52,14 @@
      <widget class="QPushButton" name="btn_close">
       <property name="geometry">
        <rect>
-        <x>810</x>
+        <x>856</x>
         <y>10</y>
         <width>16</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
       </property>
       <property name="text">
        <string/>
@@ -65,11 +68,14 @@
      <widget class="QPushButton" name="btn_min">
       <property name="geometry">
        <rect>
-        <x>780</x>
+        <x>830</x>
         <y>10</y>
         <width>16</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
       </property>
       <property name="text">
        <string/>
@@ -158,27 +164,21 @@ QPushButton:hover {
  </string>
            </property>
            <property name="currentIndex">
-            <number>0</number>
+            <number>1</number>
            </property>
-           <widget class="QWidget" name="page_2">
+           <widget class="QWidget" name="tab">
             <property name="geometry">
              <rect>
               <x>0</x>
               <y>0</y>
               <width>182</width>
-              <height>378</height>
+              <height>392</height>
              </rect>
             </property>
             <attribute name="label">
-             <string>编码转换</string>
+             <string>Example</string>
             </attribute>
-            <layout class="QVBoxLayout" name="verticalLayout_4">
-             <property name="topMargin">
-              <number>4</number>
-             </property>
-             <property name="bottomMargin">
-              <number>4</number>
-             </property>
+            <layout class="QVBoxLayout" name="verticalLayout_7">
              <item>
               <widget class="QPushButton" name="btn_example">
                <property name="minimumSize">
@@ -191,10 +191,44 @@ QPushButton:hover {
                 <string notr="true"/>
                </property>
                <property name="text">
-                <string>Example</string>
+                <string>编码解码</string>
                </property>
               </widget>
              </item>
+             <item>
+              <spacer name="verticalSpacer_5">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="page_2">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>182</width>
+              <height>392</height>
+             </rect>
+            </property>
+            <attribute name="label">
+             <string>编码转换</string>
+            </attribute>
+            <layout class="QVBoxLayout" name="verticalLayout_4">
+             <property name="topMargin">
+              <number>4</number>
+             </property>
+             <property name="bottomMargin">
+              <number>4</number>
+             </property>
              <item>
               <widget class="QPushButton" name="btn_case_conversion">
                <property name="minimumSize">
@@ -248,7 +282,7 @@ QPushButton:hover {
               <x>0</x>
               <y>0</y>
               <width>182</width>
-              <height>378</height>
+              <height>392</height>
              </rect>
             </property>
             <attribute name="label">
@@ -294,6 +328,14 @@ QPushButton:hover {
             </layout>
            </widget>
            <widget class="QWidget" name="page_4">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>182</width>
+              <height>392</height>
+             </rect>
+            </property>
             <attribute name="label">
              <string>Hash函数</string>
             </attribute>
@@ -339,7 +381,7 @@ QPushButton:hover {
               <x>0</x>
               <y>0</y>
               <width>182</width>
-              <height>378</height>
+              <height>392</height>
              </rect>
             </property>
             <attribute name="label">
@@ -393,7 +435,11 @@ QPushButton:hover {
         <property name="currentIndex">
          <number>0</number>
         </property>
-        <widget class="QWidget" name="HelloWidget"/>
+        <widget class="QWidget" name="HelloWidget">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 127);</string>
+         </property>
+        </widget>
        </widget>
       </item>
      </layout>

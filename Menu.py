@@ -1,4 +1,4 @@
-from ui.Widgets.Example.ExampleWidget import ExampleWidget
+from ui.Widgets.Example.EncodeDecode.EncodeDecodeWidget import EncodeDecodeWidget
 from ui.Widgets.encoding.BaseEncode.BaseWidget import BaseWidget
 from ui.Widgets.encoding.CaseConversion.CaseConversionWidget import CaseConversionWidget
 
@@ -10,22 +10,23 @@ from ui.Widgets.Hash.MD.MDWidget import MDWidget
 
 
 def register_menu(mainForm):
-
-    ############# 编码转换 #############
-    # Example
-    example_widget = ExampleWidget()
+    ############ Example #############
+    #  编码解码
+    example_widget = EncodeDecodeWidget()
     mainForm.mainForm.stackedWidget.addWidget(example_widget),
     mainForm.mainForm.btn_example.clicked.connect(lambda: (
         print('Example'),
         mainForm.mainForm.stackedWidget.setCurrentWidget(example_widget)
     ))
 
+    ############# 编码转换 #############
     # 英文大小写转换
     case_conversion_widget = CaseConversionWidget()
     mainForm.mainForm.stackedWidget.addWidget(case_conversion_widget),
     mainForm.mainForm.btn_case_conversion.clicked.connect(lambda: (
         print('英文大小写转换'),
-        mainForm.mainForm.stackedWidget.setCurrentWidget(case_conversion_widget)
+        mainForm.mainForm.stackedWidget.setCurrentWidget(
+            case_conversion_widget)
     ))
 
     # Base编码
