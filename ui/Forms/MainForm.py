@@ -1,18 +1,20 @@
 from PyQt5.QtWidgets import QWidget
 from ui.Forms.Ui_MainForm import Ui_Form
 from PyQt5.QtCore import Qt
-from PyQt5.QtCore import QPoint
-from PyQt5.QtGui import QMouseEvent
+from PyQt5.QtCore import QPoint, QRectF
+from PyQt5.QtGui import QMouseEvent, QColor, QPainter, QPainterPath, QBrush
 import Menu
 
 
 class MainForm(QWidget):
     # 在此定义变量
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self, parent=None):
+        # super().__init__()
+        super(MainForm, self).__init__(parent)
         self.mainForm = Ui_Form()
         self.mainForm.setupUi(self)
+        self.border_width = 8
         # 初始化外观
         self.init_appearance()
         # 功能操作
@@ -22,7 +24,8 @@ class MainForm(QWidget):
     # 设置窗口样式
     def init_appearance(self):
         # 设置窗口无边框
-        self.setWindowFlags(Qt.FramelessWindowHint)
+        # self.setAttribute(Qt.WA_TranslucentBackground)
+        # self.setWindowFlags(Qt.FramelessWindowHint | Qt.Window)
 
         # 设置按钮样式
         self.mainForm.btn_close.setStyleSheet("QPushButton{border-image: url(resource/imgs/close_normal.png)}"

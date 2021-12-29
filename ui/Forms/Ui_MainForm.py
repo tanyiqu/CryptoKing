@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'x:\Python\.Project\CryptoKing\ui\Forms\MainForm.ui'
+# Form implementation generated from reading ui file 'x:\Python\_Project\CryptoKing\ui\Forms\MainForm.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(880, 620)
+        Form.resize(880, 621)
         Form.setStyleSheet("")
         self.verticalLayout_5 = QtWidgets.QVBoxLayout(Form)
         self.verticalLayout_5.setContentsMargins(0, 0, 0, 0)
@@ -54,10 +54,37 @@ class Ui_Form(object):
         self.widget.setStyleSheet("")
         self.widget.setObjectName("widget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.widget)
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName("verticalLayout")
         self.toolBox = QtWidgets.QToolBox(self.widget)
+        self.toolBox.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
         self.toolBox.setStyleSheet("*{\n"
 "    color: #000;\n"
+"}\n"
+"\n"
+"QToolBox{\n"
+"background-color: rgb(80, 80, 80);/*背景色-空隙颜色*/\n"
+"border:1px solid rgb(128, 128, 128);\n"
+"}\n"
+"QToolBox QWidget{/*tab页*/\n"
+"background-color: rgb(80, 80, 80);\n"
+"}\n"
+"QToolBox>QAbstractButton{/*标题栏*/\n"
+"min-height:40px;\n"
+"}\n"
+"QToolBox::tab{\n"
+"background-color:rgb(40, 40, 40);\n"
+"}\n"
+"QToolBox::tab:hover{\n"
+"color:black;\n"
+"background-color: rgb(255, 170, 0);\n"
+"}\n"
+"QToolBox::tab:selected{\n"
+"color:rgb(255, 170, 0);\n"
+"}\n"
+"QToolBox::tab:selected:hover{\n"
+"color:black;\n"
 "}\n"
 "\n"
 "QPushButton {\n"
@@ -78,10 +105,11 @@ class Ui_Form(object):
 "    right: 0;\n"
 "    background-color: #1976d2;\n"
 "}\n"
-" ")
+"\n"
+"")
         self.toolBox.setObjectName("toolBox")
         self.tab = QtWidgets.QWidget()
-        self.tab.setGeometry(QtCore.QRect(0, 0, 182, 392))
+        self.tab.setGeometry(QtCore.QRect(0, 0, 198, 309))
         self.tab.setObjectName("tab")
         self.verticalLayout_7 = QtWidgets.QVBoxLayout(self.tab)
         self.verticalLayout_7.setObjectName("verticalLayout_7")
@@ -94,7 +122,7 @@ class Ui_Form(object):
         self.verticalLayout_7.addItem(spacerItem)
         self.toolBox.addItem(self.tab, "")
         self.page_2 = QtWidgets.QWidget()
-        self.page_2.setGeometry(QtCore.QRect(0, 0, 182, 392))
+        self.page_2.setGeometry(QtCore.QRect(0, 0, 198, 309))
         self.page_2.setObjectName("page_2")
         self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.page_2)
         self.verticalLayout_4.setContentsMargins(-1, 4, -1, 4)
@@ -113,7 +141,7 @@ class Ui_Form(object):
         self.verticalLayout_4.addItem(spacerItem1)
         self.toolBox.addItem(self.page_2, "")
         self.page = QtWidgets.QWidget()
-        self.page.setGeometry(QtCore.QRect(0, 0, 182, 392))
+        self.page.setGeometry(QtCore.QRect(0, 0, 198, 309))
         self.page.setObjectName("page")
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.page)
         self.verticalLayout_3.setContentsMargins(-1, 4, -1, 4)
@@ -129,7 +157,7 @@ class Ui_Form(object):
         self.verticalLayout_3.addItem(spacerItem2)
         self.toolBox.addItem(self.page, "")
         self.page_4 = QtWidgets.QWidget()
-        self.page_4.setGeometry(QtCore.QRect(0, 0, 182, 392))
+        self.page_4.setGeometry(QtCore.QRect(0, 0, 198, 309))
         self.page_4.setObjectName("page_4")
         self.verticalLayout_6 = QtWidgets.QVBoxLayout(self.page_4)
         self.verticalLayout_6.setObjectName("verticalLayout_6")
@@ -144,7 +172,7 @@ class Ui_Form(object):
         self.verticalLayout_6.addItem(spacerItem3)
         self.toolBox.addItem(self.page_4, "")
         self.page_3 = QtWidgets.QWidget()
-        self.page_3.setGeometry(QtCore.QRect(0, 0, 182, 392))
+        self.page_3.setGeometry(QtCore.QRect(0, 0, 198, 309))
         self.page_3.setObjectName("page_3")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.page_3)
         self.verticalLayout_2.setContentsMargins(-1, 4, -1, 4)

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>880</width>
-    <height>620</height>
+    <height>621</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -136,11 +136,53 @@ color: #fff;</string>
          <string notr="true"/>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
          <item>
           <widget class="QToolBox" name="toolBox">
+           <property name="cursor">
+            <cursorShape>ArrowCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">*{
     color: #000;
+}
+
+QToolBox{
+background-color: rgb(80, 80, 80);/*背景色-空隙颜色*/
+border:1px solid rgb(128, 128, 128);
+}
+QToolBox QWidget{/*tab页*/
+background-color: rgb(80, 80, 80);
+}
+QToolBox&gt;QAbstractButton{/*标题栏*/
+min-height:40px;
+}
+QToolBox::tab{
+background-color:rgb(40, 40, 40);
+}
+QToolBox::tab:hover{
+color:black;
+background-color: rgb(255, 170, 0);
+}
+QToolBox::tab:selected{
+color:rgb(255, 170, 0);
+}
+QToolBox::tab:selected:hover{
+color:black;
 }
 
 QPushButton {
@@ -161,18 +203,19 @@ QPushButton:hover {
     right: 0;
     background-color: #1976d2;
 }
- </string>
+
+</string>
            </property>
            <property name="currentIndex">
-            <number>1</number>
+            <number>0</number>
            </property>
            <widget class="QWidget" name="tab">
             <property name="geometry">
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>182</width>
-              <height>392</height>
+              <width>198</width>
+              <height>309</height>
              </rect>
             </property>
             <attribute name="label">
@@ -215,8 +258,8 @@ QPushButton:hover {
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>182</width>
-              <height>392</height>
+              <width>198</width>
+              <height>309</height>
              </rect>
             </property>
             <attribute name="label">
@@ -281,8 +324,8 @@ QPushButton:hover {
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>182</width>
-              <height>392</height>
+              <width>198</width>
+              <height>309</height>
              </rect>
             </property>
             <attribute name="label">
@@ -332,8 +375,8 @@ QPushButton:hover {
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>182</width>
-              <height>392</height>
+              <width>198</width>
+              <height>309</height>
              </rect>
             </property>
             <attribute name="label">
@@ -380,8 +423,8 @@ QPushButton:hover {
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>182</width>
-              <height>392</height>
+              <width>198</width>
+              <height>309</height>
              </rect>
             </property>
             <attribute name="label">
