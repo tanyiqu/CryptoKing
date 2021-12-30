@@ -64,17 +64,19 @@ class Ui_Form(object):
 "}\n"
 "\n"
 "QToolBox{\n"
-"background-color: rgb(80, 80, 80);/*背景色-空隙颜色*/\n"
-"border:1px solid rgb(128, 128, 128);\n"
+"/*background-color: rgb(80, 80, 80);*//*背景色-空隙颜色*/\n"
+"/*border:1px solid rgb(128, 128, 128);*/\n"
 "}\n"
 "QToolBox QWidget{/*tab页*/\n"
-"background-color: rgb(80, 80, 80);\n"
+"/*background: #fff;*/\n"
 "}\n"
 "QToolBox>QAbstractButton{/*标题栏*/\n"
 "min-height:40px;\n"
+"font: 13pt \"微软雅黑\";\n"
+"padding-left:10px;\n"
 "}\n"
 "QToolBox::tab{\n"
-"background-color:rgb(40, 40, 40);\n"
+"background-color:#66afe9;/*rgb(40, 40, 40);*/\n"
 "}\n"
 "QToolBox::tab:hover{\n"
 "color:black;\n"
@@ -82,6 +84,7 @@ class Ui_Form(object):
 "}\n"
 "QToolBox::tab:selected{\n"
 "color:rgb(255, 170, 0);\n"
+"background:#1976d2;\n"
 "}\n"
 "QToolBox::tab:selected:hover{\n"
 "color:black;\n"
@@ -89,7 +92,7 @@ class Ui_Form(object):
 "\n"
 "QPushButton {\n"
 "    border-radius: 4px;\n"
-"    background-color: #66afe9;\n"
+"    background: #66afe9;\n"
 "    border: none;\n"
 "    color: #FFFFFF;\n"
 "    height:35px;\n"
@@ -107,9 +110,10 @@ class Ui_Form(object):
 "}\n"
 "\n"
 "")
+        self.toolBox.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.toolBox.setObjectName("toolBox")
         self.tab = QtWidgets.QWidget()
-        self.tab.setGeometry(QtCore.QRect(0, 0, 198, 309))
+        self.tab.setGeometry(QtCore.QRect(0, 0, 200, 341))
         self.tab.setObjectName("tab")
         self.verticalLayout_7 = QtWidgets.QVBoxLayout(self.tab)
         self.verticalLayout_7.setObjectName("verticalLayout_7")
@@ -122,7 +126,7 @@ class Ui_Form(object):
         self.verticalLayout_7.addItem(spacerItem)
         self.toolBox.addItem(self.tab, "")
         self.page_2 = QtWidgets.QWidget()
-        self.page_2.setGeometry(QtCore.QRect(0, 0, 198, 309))
+        self.page_2.setGeometry(QtCore.QRect(0, 0, 200, 341))
         self.page_2.setObjectName("page_2")
         self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.page_2)
         self.verticalLayout_4.setContentsMargins(-1, 4, -1, 4)
@@ -141,7 +145,7 @@ class Ui_Form(object):
         self.verticalLayout_4.addItem(spacerItem1)
         self.toolBox.addItem(self.page_2, "")
         self.page = QtWidgets.QWidget()
-        self.page.setGeometry(QtCore.QRect(0, 0, 198, 309))
+        self.page.setGeometry(QtCore.QRect(0, 0, 200, 341))
         self.page.setObjectName("page")
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.page)
         self.verticalLayout_3.setContentsMargins(-1, 4, -1, 4)
@@ -157,7 +161,7 @@ class Ui_Form(object):
         self.verticalLayout_3.addItem(spacerItem2)
         self.toolBox.addItem(self.page, "")
         self.page_4 = QtWidgets.QWidget()
-        self.page_4.setGeometry(QtCore.QRect(0, 0, 198, 309))
+        self.page_4.setGeometry(QtCore.QRect(0, 0, 200, 341))
         self.page_4.setObjectName("page_4")
         self.verticalLayout_6 = QtWidgets.QVBoxLayout(self.page_4)
         self.verticalLayout_6.setObjectName("verticalLayout_6")
@@ -172,7 +176,7 @@ class Ui_Form(object):
         self.verticalLayout_6.addItem(spacerItem3)
         self.toolBox.addItem(self.page_4, "")
         self.page_3 = QtWidgets.QWidget()
-        self.page_3.setGeometry(QtCore.QRect(0, 0, 198, 309))
+        self.page_3.setGeometry(QtCore.QRect(0, 0, 183, 413))
         self.page_3.setObjectName("page_3")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.page_3)
         self.verticalLayout_2.setContentsMargins(-1, 4, -1, 4)
@@ -180,6 +184,30 @@ class Ui_Form(object):
         self.pushButton_6 = QtWidgets.QPushButton(self.page_3)
         self.pushButton_6.setObjectName("pushButton_6")
         self.verticalLayout_2.addWidget(self.pushButton_6)
+        self.pushButton_9 = QtWidgets.QPushButton(self.page_3)
+        self.pushButton_9.setObjectName("pushButton_9")
+        self.verticalLayout_2.addWidget(self.pushButton_9)
+        self.pushButton_10 = QtWidgets.QPushButton(self.page_3)
+        self.pushButton_10.setObjectName("pushButton_10")
+        self.verticalLayout_2.addWidget(self.pushButton_10)
+        self.pushButton_4 = QtWidgets.QPushButton(self.page_3)
+        self.pushButton_4.setObjectName("pushButton_4")
+        self.verticalLayout_2.addWidget(self.pushButton_4)
+        self.pushButton_8 = QtWidgets.QPushButton(self.page_3)
+        self.pushButton_8.setObjectName("pushButton_8")
+        self.verticalLayout_2.addWidget(self.pushButton_8)
+        self.pushButton_7 = QtWidgets.QPushButton(self.page_3)
+        self.pushButton_7.setObjectName("pushButton_7")
+        self.verticalLayout_2.addWidget(self.pushButton_7)
+        self.pushButton_5 = QtWidgets.QPushButton(self.page_3)
+        self.pushButton_5.setObjectName("pushButton_5")
+        self.verticalLayout_2.addWidget(self.pushButton_5)
+        self.pushButton_3 = QtWidgets.QPushButton(self.page_3)
+        self.pushButton_3.setObjectName("pushButton_3")
+        self.verticalLayout_2.addWidget(self.pushButton_3)
+        self.pushButton_2 = QtWidgets.QPushButton(self.page_3)
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.verticalLayout_2.addWidget(self.pushButton_2)
         spacerItem4 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout_2.addItem(spacerItem4)
         self.toolBox.addItem(self.page_3, "")
@@ -197,7 +225,7 @@ class Ui_Form(object):
         self.verticalLayout_5.addWidget(self.w_main)
 
         self.retranslateUi(Form)
-        self.toolBox.setCurrentIndex(0)
+        self.toolBox.layout().setSpacing(0)
         self.stackedWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
@@ -217,4 +245,12 @@ class Ui_Form(object):
         self.btn_md.setText(_translate("Form", "MD系列"))
         self.toolBox.setItemText(self.toolBox.indexOf(self.page_4), _translate("Form", "Hash函数"))
         self.pushButton_6.setText(_translate("Form", "PushButton"))
+        self.pushButton_9.setText(_translate("Form", "PushButton"))
+        self.pushButton_10.setText(_translate("Form", "PushButton"))
+        self.pushButton_4.setText(_translate("Form", "PushButton"))
+        self.pushButton_8.setText(_translate("Form", "PushButton"))
+        self.pushButton_7.setText(_translate("Form", "PushButton"))
+        self.pushButton_5.setText(_translate("Form", "PushButton"))
+        self.pushButton_3.setText(_translate("Form", "PushButton"))
+        self.pushButton_2.setText(_translate("Form", "PushButton"))
         self.toolBox.setItemText(self.toolBox.indexOf(self.page_3), _translate("Form", "其他"))
