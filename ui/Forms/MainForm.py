@@ -1,3 +1,4 @@
+from re import S
 from PyQt5.QtWidgets import QWidget
 from ui.Forms.Ui_MainForm import Ui_Form
 from PyQt5.QtCore import Qt
@@ -47,7 +48,7 @@ class MainForm(QWidget):
         self.set_move()
 
         # 注册菜单按钮
-        Menu.register_menu(self)
+        Menu.register_menu_list(self.mainForm)
         pass
 
     # ##### 实现窗口拖动  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
