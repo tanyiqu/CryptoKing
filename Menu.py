@@ -60,4 +60,7 @@ def register_menu_list(mainForm):
         # 将这个菜案添加只toolbox
         toolBox.insertItem(-1, w1, group['group_name'])
         pass
+
+    # 设置默认菜单
+    toolBox.setCurrentIndex(1)
     pass
