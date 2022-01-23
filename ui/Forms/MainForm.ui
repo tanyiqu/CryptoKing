@@ -119,6 +119,19 @@ color: #fff;</string>
           <string>CryptoKing</string>
          </property>
         </widget>
+        <widget class="QPushButton" name="btn_search">
+         <property name="geometry">
+          <rect>
+           <x>550</x>
+           <y>30</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
        </widget>
       </item>
       <item>

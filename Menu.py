@@ -1,9 +1,9 @@
 from asyncio.proactor_events import constants
 from tkinter import W
 from unicodedata import name
-from PyQt5.QtWidgets import  QWidget, QPushButton, QVBoxLayout, QSpacerItem, QSizePolicy, QStackedWidget
+from PyQt5.QtWidgets import QWidget, QPushButton, QVBoxLayout, QSpacerItem, QSizePolicy, QStackedWidget
 from functools import partial
-from config import config
+import config
 
 ########## 注册菜单按钮，放在这单独管理 ##########
 
@@ -11,28 +11,15 @@ from config import config
 # 用于切换widget
 def change_widget(stackedWidget: QStackedWidget, action):
     print(action['name'])
-    stackedWidget.setCurrentIndex(stackedWidget.addWidget(action['callback_widget']))
+    stackedWidget.setCurrentIndex(
+        stackedWidget.addWidget(action['callback_widget']))
     pass
 
 
 # 注册菜单
 def register_menu_list(mainForm):
-
     # 构造所有的Widget
-    config2 = []
-    for group in config:
-        dict1 = {}
-        actions = []
-        for action in group['actions']:
-            gp = {}
-            gp['name'] = action['name']
-            gp['callback_widget'] = action['callback_widget']()
-            actions.append(gp)
-            pass
-        dict1['group_name'] = group['group_name']
-        dict1['actions'] = actions
-        config2.append(dict1)
-        pass
+    config.create()
 
     toolBox = mainForm.toolBox
     # 先清空所有菜单
@@ -41,7 +28,7 @@ def register_menu_list(mainForm):
         pass
 
     # 根据配置添加
-    for group in config2:
+    for group in config._config:
         # 添加一个菜单
         w1 = QWidget()
         l1 = QVBoxLayout()
@@ -49,7 +36,8 @@ def register_menu_list(mainForm):
         for action in group['actions']:
             b1 = QPushButton(action['name'])
             # 给按钮设置监听
-            b1.clicked.connect(partial(change_widget,mainForm.stackedWidget, action))
+            b1.clicked.connect(
+                partial(change_widget, mainForm.stackedWidget, action))
             l1.addWidget(b1)
             pass
         w1.setLayout(l1)

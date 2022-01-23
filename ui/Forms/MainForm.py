@@ -6,6 +6,7 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtCore import QPoint, QRectF
 from PyQt5.QtGui import QMouseEvent, QColor, QPainter, QPainterPath, QBrush
 import Menu
+import config
 
 class MainForm(QWidget):
     # 在此定义变量
@@ -35,7 +36,6 @@ class MainForm(QWidget):
         self.mainForm.btn_min.setStyleSheet("QPushButton{border-image: url(resource/imgs/min_normal.png)}"
                                             "QPushButton:hover{border-image: url(resource/imgs/min_hover.png)}")
 
-
         # self.mainForm.widget.setStyleSheet("QWidget#widget{background-image: url(resource/imgs/bg.png);background-size: cover;}")
         # self.mainForm.widget.setAutoFillBackground(True) #一定要加上
         # palette=QPalette()
@@ -57,6 +57,10 @@ class MainForm(QWidget):
 
         # 注册菜单按钮
         Menu.register_menu_list(self.mainForm)
+
+
+        # 测试按钮
+        self.mainForm.btn_search.clicked.connect(lambda: print(config._config))
         pass
 
     # ##### 实现窗口拖动  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓

@@ -9,7 +9,7 @@ from ui.Widgets.Encoding.CaseConversion.CaseConversionWidget import CaseConversi
 from ui.Widgets.Hash.MD5.MD5Widget import MD5Widget
 from ui.Widgets.Hash.MD.MDWidget import MDWidget
 
-config = [
+_config = [
     {
         'group_name': 'Example',
         'actions': [
@@ -76,3 +76,22 @@ config = [
         ]
     },
 ]
+
+
+def create():
+    global _config
+    config_list = []
+    for group in _config:
+        dict1 = {}
+        actions = []
+        for action in group['actions']:
+            gp = {}
+            gp['name'] = action['name']
+            gp['callback_widget'] = action['callback_widget']()
+            actions.append(gp)
+            pass
+        dict1['group_name'] = group['group_name']
+        dict1['actions'] = actions
+        config_list.append(dict1)
+    _config = config_list
+    pass

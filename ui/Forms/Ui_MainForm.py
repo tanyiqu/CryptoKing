@@ -21,6 +21,7 @@ class Ui_Form(object):
         self.gridLayout.setSpacing(0)
         self.gridLayout.setObjectName("gridLayout")
         self.widget = QtWidgets.QWidget(Form)
+        self.widget.setStyleSheet("")
         self.widget.setObjectName("widget")
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.widget)
         self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
@@ -47,6 +48,9 @@ class Ui_Form(object):
         self.lbl_app_name.setStyleSheet("font: 24pt \"微软雅黑\";\n"
 "color: #fff;")
         self.lbl_app_name.setObjectName("lbl_app_name")
+        self.btn_search = QtWidgets.QPushButton(self.w_head)
+        self.btn_search.setGeometry(QtCore.QRect(550, 30, 75, 23))
+        self.btn_search.setObjectName("btn_search")
         self.verticalLayout_3.addWidget(self.w_head)
         self.w_main = QtWidgets.QWidget(self.widget)
         self.w_main.setStyleSheet("")
@@ -189,6 +193,7 @@ class Ui_Form(object):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "CryptoKing"))
         self.lbl_app_name.setText(_translate("Form", "CryptoKing"))
+        self.btn_search.setText(_translate("Form", "PushButton"))
         self.btn_example.setText(_translate("Form", "编码解码"))
         self.toolBox.setItemText(self.toolBox.indexOf(self.tab), _translate("Form", "Example"))
         self.btn_case_conversion.setText(_translate("Form", "英文大小写转换"))
