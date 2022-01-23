@@ -1,12 +1,6 @@
 #
 
-def encode(string):
-    string = string + '--encode'
-    return string
-    pass
-
-
-def decode(string):
-    string = string + '--decode'
+def encode(string: str):
+    string = string + '--encode 单向计算'
     return string
     pass

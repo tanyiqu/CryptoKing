@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'x:\Python\.Project\CryptoKing\ui\Widgets\Example\ExampleWidget.ui'
+# Form implementation generated from reading ui file 'x:\Python\_Project\CryptoKing\ui\Widgets\Example\EncodeOnlyMulti\EncodeOnlyMultiWidget.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -11,14 +11,48 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_ExampleWidget(object):
-    def setupUi(self, ExampleWidget):
-        ExampleWidget.setObjectName("ExampleWidget")
-        ExampleWidget.resize(758, 513)
-        ExampleWidget.setMinimumSize(QtCore.QSize(90, 40))
-        self.verticalLayout = QtWidgets.QVBoxLayout(ExampleWidget)
+class Ui_EncodeOnlyMultiWidget(object):
+    def setupUi(self, EncodeOnlyMultiWidget):
+        EncodeOnlyMultiWidget.setObjectName("EncodeOnlyMultiWidget")
+        EncodeOnlyMultiWidget.resize(670, 513)
+        EncodeOnlyMultiWidget.setMinimumSize(QtCore.QSize(90, 40))
+        self.verticalLayout = QtWidgets.QVBoxLayout(EncodeOnlyMultiWidget)
         self.verticalLayout.setObjectName("verticalLayout")
-        self.widget = QtWidgets.QWidget(ExampleWidget)
+        self.widget_3 = QtWidgets.QWidget(EncodeOnlyMultiWidget)
+        self.widget_3.setMinimumSize(QtCore.QSize(0, 60))
+        self.widget_3.setMaximumSize(QtCore.QSize(16777215, 60))
+        self.widget_3.setObjectName("widget_3")
+        self.combo_method = QtWidgets.QComboBox(self.widget_3)
+        self.combo_method.setGeometry(QtCore.QRect(10, 10, 201, 41))
+        self.combo_method.setStyleSheet("QComboBox{\n"
+"    background: #66afe9;\n"
+"    color:#fff;\n"
+"    font: 11pt \"微软雅黑\";\n"
+"    font-size:14px;\n"
+"    padding: 1px 15px 1px 10px;\n"
+"    border:1px solid rgba(228,228,228,1);\n"
+"    border-radius:5px 5px 0px 0px;\n"
+"}\n"
+"\n"
+"QComboBox::drop-down {\n"
+"    subcontrol-origin: padding;\n"
+"    subcontrol-position: top right;\n"
+"    width: 15px;\n"
+"    border:none;\n"
+"}\n"
+"\n"
+"QComboBox QAbstractItemView {\n"
+"    outline: 0px solid gray;\n"
+"    border: 1px solid #fff;\n"
+"    color: #000;\n"
+"    background-color: #fff;\n"
+"    selection-background-color: #1976d2;\n"
+"}")
+        self.combo_method.setObjectName("combo_method")
+        self.combo_method.addItem("")
+        self.combo_method.addItem("")
+        self.verticalLayout.addWidget(self.widget_3)
+        self.widget = QtWidgets.QWidget(EncodeOnlyMultiWidget)
         self.widget.setMaximumSize(QtCore.QSize(16777215, 280))
         self.widget.setObjectName("widget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.widget)
@@ -60,7 +94,7 @@ class Ui_ExampleWidget(object):
         self.txt_right.setObjectName("txt_right")
         self.horizontalLayout.addWidget(self.txt_right)
         self.verticalLayout.addWidget(self.widget)
-        self.widget_2 = QtWidgets.QWidget(ExampleWidget)
+        self.widget_2 = QtWidgets.QWidget(EncodeOnlyMultiWidget)
         self.widget_2.setMaximumSize(QtCore.QSize(1111111, 58))
         self.widget_2.setObjectName("widget_2")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.widget_2)
@@ -88,45 +122,22 @@ class Ui_ExampleWidget(object):
 "")
         self.btn_encode.setObjectName("btn_encode")
         self.horizontalLayout_2.addWidget(self.btn_encode)
-        self.btn_decode = QtWidgets.QPushButton(self.widget_2)
-        self.btn_decode.setMinimumSize(QtCore.QSize(90, 40))
-        self.btn_decode.setMaximumSize(QtCore.QSize(90, 40))
-        self.btn_decode.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btn_decode.setStyleSheet("QPushButton {\n"
-"    border-radius: 4px;\n"
-"    background-color: #66afe9;\n"
-"    border: none;\n"
-"    color: #FFFFFF;\n"
-"    text-align: center;\n"
-"    font: 11pt \"微软雅黑\";\n"
-"    margin: 2px;\n"
-"    vertical-align: middle;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    opacity: 1;\n"
-"    right: 0;\n"
-"    background-color: #1976d2;\n"
-"}\n"
-"")
-        self.btn_decode.setObjectName("btn_decode")
-        self.horizontalLayout_2.addWidget(self.btn_decode)
         spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_2.addItem(spacerItem)
         self.verticalLayout.addWidget(self.widget_2)
         spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout.addItem(spacerItem1)
 
-        self.retranslateUi(ExampleWidget)
-        QtCore.QMetaObject.connectSlotsByName(ExampleWidget)
-        ExampleWidget.setTabOrder(self.txt_left, self.txt_right)
-        ExampleWidget.setTabOrder(self.txt_right, self.btn_encode)
-        ExampleWidget.setTabOrder(self.btn_encode, self.btn_decode)
+        self.retranslateUi(EncodeOnlyMultiWidget)
+        QtCore.QMetaObject.connectSlotsByName(EncodeOnlyMultiWidget)
+        EncodeOnlyMultiWidget.setTabOrder(self.txt_left, self.txt_right)
+        EncodeOnlyMultiWidget.setTabOrder(self.txt_right, self.btn_encode)
 
-    def retranslateUi(self, ExampleWidget):
+    def retranslateUi(self, EncodeOnlyMultiWidget):
         _translate = QtCore.QCoreApplication.translate
-        ExampleWidget.setWindowTitle(_translate("ExampleWidget", "Form"))
-        self.txt_left.setPlaceholderText(_translate("ExampleWidget", "Input:"))
-        self.txt_right.setPlaceholderText(_translate("ExampleWidget", "Output:"))
-        self.btn_encode.setText(_translate("ExampleWidget", "编码"))
-        self.btn_decode.setText(_translate("ExampleWidget", "解码"))
+        EncodeOnlyMultiWidget.setWindowTitle(_translate("EncodeOnlyMultiWidget", "Form"))
+        self.combo_method.setItemText(0, _translate("EncodeOnlyMultiWidget", "Choose1"))
+        self.combo_method.setItemText(1, _translate("EncodeOnlyMultiWidget", "Choose2"))
+        self.txt_left.setPlaceholderText(_translate("EncodeOnlyMultiWidget", "Input:"))
+        self.txt_right.setPlaceholderText(_translate("EncodeOnlyMultiWidget", "Output:"))
+        self.btn_encode.setText(_translate("EncodeOnlyMultiWidget", "计算"))

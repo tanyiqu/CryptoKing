@@ -1,3 +1,4 @@
+import imp
 from re import S
 from PyQt5.QtWidgets import QWidget
 from ui.Forms.Ui_MainForm import Ui_Form
@@ -5,7 +6,6 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtCore import QPoint, QRectF
 from PyQt5.QtGui import QMouseEvent, QColor, QPainter, QPainterPath, QBrush
 import Menu
-
 
 class MainForm(QWidget):
     # 在此定义变量
@@ -20,6 +20,7 @@ class MainForm(QWidget):
         self.init_appearance()
         # 功能操作
         self.init_func()
+        # self.resize(300,300)
         pass
 
     # 设置窗口样式
@@ -33,6 +34,13 @@ class MainForm(QWidget):
                                               "QPushButton:hover{border-image: url(resource/imgs/close_hover.png)}")
         self.mainForm.btn_min.setStyleSheet("QPushButton{border-image: url(resource/imgs/min_normal.png)}"
                                             "QPushButton:hover{border-image: url(resource/imgs/min_hover.png)}")
+
+
+        # self.mainForm.widget.setStyleSheet("QWidget#widget{background-image: url(resource/imgs/bg.png);background-size: cover;}")
+        # self.mainForm.widget.setAutoFillBackground(True) #一定要加上
+        # palette=QPalette()
+        # palette.setBrush(QPalette.Background, QBrush(QPixmap("F:\背景图.png")));
+        # self.widget.setPalette(palette)
         pass
 
     # 设置窗口的功能
@@ -57,7 +65,7 @@ class MainForm(QWidget):
     _isTracking = False
 
     def set_move(self):
-        self.setWindowFlags(Qt.FramelessWindowHint)  # 无边框
+        # self.setWindowFlags(Qt.FramelessWindowHint)  # 无边框
         self.show()
 
     def mouseMoveEvent(self, e: QMouseEvent):

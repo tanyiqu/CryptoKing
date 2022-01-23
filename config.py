@@ -1,6 +1,10 @@
+from ui.Widgets.Example.EncodeOnly.EncodeOnlyWidget import EncodeOnlyWidget
 from ui.Widgets.Example.EncodeDecode.EncodeDecodeWidget import EncodeDecodeWidget
-from ui.Widgets.encoding.BaseEncode.BaseWidget import BaseWidget
-from ui.Widgets.encoding.CaseConversion.CaseConversionWidget import CaseConversionWidget
+from ui.Widgets.Example.EncodeOnlyMulti.EncodeOnlyMultiWidget import EncodeOnlyMultiWidget
+from ui.Widgets.Example.EncodeDecodeMulti.EncodeDecodeMultiWidget import EncodeDecodeMultiWidget
+
+from ui.Widgets.Encoding.BaseEncode.BaseWidget import BaseWidget
+from ui.Widgets.Encoding.CaseConversion.CaseConversionWidget import CaseConversionWidget
 
 from ui.Widgets.Hash.MD5.MD5Widget import MD5Widget
 from ui.Widgets.Hash.MD.MDWidget import MDWidget
@@ -10,12 +14,20 @@ config = [
         'group_name': 'Example',
         'actions': [
             {
-                'name': '编码解码1',
+                'name': '单向计算',
+                'callback_widget': EncodeOnlyWidget
+            },
+            {
+                'name': '编码解码',
                 'callback_widget': EncodeDecodeWidget
             },
             {
-                'name': '编码解码2',
-                'callback_widget': BaseWidget
+                'name': '单向计算（复选）',
+                'callback_widget': EncodeOnlyMultiWidget
+            },
+            {
+                'name': '编码解码（复选）',
+                'callback_widget': EncodeDecodeMultiWidget
             },
         ]
     },
@@ -37,7 +49,7 @@ config = [
         'actions': [
             {
                 'name': '编码解码3',
-                'callback_widget': CaseConversionWidget
+                'callback_widget': EncodeDecodeWidget
             },
         ]
     },
@@ -59,7 +71,7 @@ config = [
         'actions': [
             {
                 'name': '编码解码3',
-                'callback_widget': CaseConversionWidget
+                'callback_widget': EncodeDecodeWidget
             },
         ]
     },

@@ -62,5 +62,5 @@ def register_menu_list(mainForm):
         pass
 
     # 设置默认菜单
-    toolBox.setCurrentIndex(1)
+    toolBox.setCurrentIndex(0)
     pass

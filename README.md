@@ -18,11 +18,10 @@ pip3 install PyQt5==5.15.4 PyQt5-Qt5==5.15.2 PyQt5-sip==12.9.0 pycryptodomex==3.
 ## 功能（TODO）
 
 - Example
-  - [ ] 单向计算
+  - [x] 单向计算
   - [x] 编码解码
-  - [ ] 单向计算（复选）
-  - [ ] 编码解码（复选）
-  - [ ] 加密解密
+  - [x] 单向计算（复选）
+  - [x] 编码解码（复选）
 - 编码转换
   - [ ] ASCII
   - [x] Base编码

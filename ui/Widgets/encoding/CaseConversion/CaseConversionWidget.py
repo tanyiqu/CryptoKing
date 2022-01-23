@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import QWidget
-from ui.Widgets.encoding.CaseConversion.Ui_CaseConversion import Ui_CaseConversion
+from ui.Widgets.Encoding.CaseConversion.Ui_CaseConversion import Ui_CaseConversion
 
-import ui.Widgets.encoding.CaseConversion.core as core
+import ui.Widgets.Encoding.CaseConversion.core as core
 
 
 class CaseConversionWidget(QWidget):

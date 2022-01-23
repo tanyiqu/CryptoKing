@@ -13,12 +13,7 @@ class EncodeDecodeWidget(QWidget):
         self.initFunc()
         pass
 
-        # 初始化
-
     def initFunc(self):
-        # 设置文本不自动换行
-        # self.widget.txt_left.setWordWrapMode(QTextOption.WrapMode)
-
         self.widget.btn_encode.clicked.connect(self.encode)
         self.widget.btn_decode.clicked.connect(self.decode)
         pass

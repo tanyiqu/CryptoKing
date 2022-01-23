@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import QWidget
-from ui.Widgets.encoding.BaseEncode.Ui_BaseWidget import Ui_BaseWidget
-import ui.Widgets.encoding.BaseEncode.base_core as base_core
+from ui.Widgets.Encoding.BaseEncode.Ui_BaseWidget import Ui_BaseWidget
+import ui.Widgets.Encoding.BaseEncode.base_core as base_core
 
 
 class BaseWidget(QWidget):

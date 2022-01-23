@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>BaseWidget</class>
- <widget class="QWidget" name="BaseWidget">
+ <class>EncodeOnlyMultiWidget</class>
+ <widget class="QWidget" name="EncodeOnlyMultiWidget">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>758</width>
+    <width>670</width>
     <height>513</height>
    </rect>
   </property>
@@ -71,17 +71,12 @@ QComboBox QAbstractItemView {
       </property>
       <item>
        <property name="text">
-        <string>Base 64</string>
+        <string>Choose1</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Base 32</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Base 16</string>
+        <string>Choose2</string>
        </property>
       </item>
      </widget>
@@ -98,18 +93,6 @@ QComboBox QAbstractItemView {
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <widget class="QPlainTextEdit" name="txt_left">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>250</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>250</height>
-         </size>
-        </property>
         <property name="styleSheet">
          <string notr="true">QPlainTextEdit {
 font-size: 14px;
@@ -125,8 +108,11 @@ border-color: #66afe9;
 outline: 0;
 }</string>
         </property>
-        <property name="plainText">
-         <string/>
+        <property name="lineWrapMode">
+         <enum>QPlainTextEdit::WidgetWidth</enum>
+        </property>
+        <property name="placeholderText">
+         <string>Input:</string>
         </property>
        </widget>
       </item>
@@ -162,6 +148,9 @@ outline: 0;
         <property name="readOnly">
          <bool>true</bool>
         </property>
+        <property name="placeholderText">
+         <string>Output:</string>
+        </property>
        </widget>
       </item>
      </layout>
@@ -190,43 +179,8 @@ outline: 0;
           <height>40</height>
          </size>
         </property>
-        <property name="styleSheet">
-         <string notr="true">QPushButton {
-    border-radius: 4px;
-    background-color: #66afe9;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    font: 11pt &quot;微软雅黑&quot;;
-    margin: 2px;
-    vertical-align: middle;
-}
-
-QPushButton:hover {
-    opacity: 1;
-    right: 0;
-    background-color: #1976d2;
-}
-</string>
-        </property>
-        <property name="text">
-         <string>编码</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="btn_decode">
-        <property name="minimumSize">
-         <size>
-          <width>90</width>
-          <height>40</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>90</width>
-          <height>40</height>
-         </size>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
         </property>
         <property name="styleSheet">
          <string notr="true">QPushButton {
@@ -248,7 +202,7 @@ QPushButton:hover {
 </string>
         </property>
         <property name="text">
-         <string>解码</string>
+         <string>计算</string>
         </property>
        </widget>
       </item>
@@ -283,6 +237,11 @@ QPushButton:hover {
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>txt_left</tabstop>
+  <tabstop>txt_right</tabstop>
+  <tabstop>btn_encode</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
