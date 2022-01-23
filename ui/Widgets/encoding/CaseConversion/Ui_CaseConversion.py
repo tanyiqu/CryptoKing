@@ -14,10 +14,51 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_CaseConversion(object):
     def setupUi(self, CaseConversion):
         CaseConversion.setObjectName("CaseConversion")
-        CaseConversion.resize(647, 527)
+        CaseConversion.resize(754, 565)
         CaseConversion.setMinimumSize(QtCore.QSize(90, 40))
-        self.btn_upper = QtWidgets.QPushButton(CaseConversion)
-        self.btn_upper.setGeometry(QtCore.QRect(20, 380, 90, 40))
+        self.verticalLayout = QtWidgets.QVBoxLayout(CaseConversion)
+        self.verticalLayout.setContentsMargins(16, 16, 16, 50)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.txt_left = QtWidgets.QPlainTextEdit(CaseConversion)
+        self.txt_left.setStyleSheet("QPlainTextEdit {\n"
+"font-size: 14px;\n"
+"color: #000;\n"
+"font: 11pt \"微软雅黑\";\n"
+"background-color: #ffffff;\n"
+"border: 1px solid #cccccc;\n"
+"border-radius: 4px;\n"
+"}\n"
+"\n"
+"QPlainTextEdit:focus {\n"
+"border-color: #66afe9;\n"
+"outline: 0;\n"
+"}")
+        self.txt_left.setObjectName("txt_left")
+        self.verticalLayout.addWidget(self.txt_left)
+        self.txt_right = QtWidgets.QPlainTextEdit(CaseConversion)
+        self.txt_right.setStyleSheet("QPlainTextEdit {\n"
+"font-size: 14px;\n"
+"color: #000;\n"
+"font: 11pt \"微软雅黑\";\n"
+"background-color: #ffffff;\n"
+"border: 1px solid #cccccc;\n"
+"border-radius: 4px;\n"
+"}\n"
+"\n"
+"QPlainTextEdit:focus {\n"
+"border-color: #66afe9;\n"
+"outline: 0;\n"
+"}")
+        self.txt_right.setReadOnly(True)
+        self.txt_right.setObjectName("txt_right")
+        self.verticalLayout.addWidget(self.txt_right)
+        self.widget = QtWidgets.QWidget(CaseConversion)
+        self.widget.setMinimumSize(QtCore.QSize(0, 60))
+        self.widget.setMaximumSize(QtCore.QSize(16777215, 60))
+        self.widget.setObjectName("widget")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.widget)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.btn_upper = QtWidgets.QPushButton(self.widget)
         self.btn_upper.setMinimumSize(QtCore.QSize(90, 40))
         self.btn_upper.setMaximumSize(QtCore.QSize(90, 40))
         self.btn_upper.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
@@ -39,8 +80,8 @@ class Ui_CaseConversion(object):
 "}\n"
 "")
         self.btn_upper.setObjectName("btn_upper")
-        self.btn_lower = QtWidgets.QPushButton(CaseConversion)
-        self.btn_lower.setGeometry(QtCore.QRect(120, 380, 90, 40))
+        self.horizontalLayout.addWidget(self.btn_upper)
+        self.btn_lower = QtWidgets.QPushButton(self.widget)
         self.btn_lower.setMinimumSize(QtCore.QSize(90, 40))
         self.btn_lower.setMaximumSize(QtCore.QSize(90, 40))
         self.btn_lower.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
@@ -62,53 +103,18 @@ class Ui_CaseConversion(object):
 "}\n"
 "")
         self.btn_lower.setObjectName("btn_lower")
-        self.txt_left = QtWidgets.QPlainTextEdit(CaseConversion)
-        self.txt_left.setGeometry(QtCore.QRect(20, 20, 591, 170))
-        self.txt_left.setMinimumSize(QtCore.QSize(0, 170))
-        self.txt_left.setMaximumSize(QtCore.QSize(16777215, 0))
-        self.txt_left.setStyleSheet("QPlainTextEdit {\n"
-"font-size: 14px;\n"
-"color: #000;\n"
-"font: 11pt \"微软雅黑\";\n"
-"background-color: #ffffff;\n"
-"border: 1px solid #cccccc;\n"
-"border-radius: 4px;\n"
-"}\n"
-"\n"
-"QPlainTextEdit:focus {\n"
-"border-color: #66afe9;\n"
-"outline: 0;\n"
-"}")
-        self.txt_left.setLineWrapMode(QtWidgets.QPlainTextEdit.WidgetWidth)
-        self.txt_left.setObjectName("txt_left")
-        self.txt_right = QtWidgets.QPlainTextEdit(CaseConversion)
-        self.txt_right.setGeometry(QtCore.QRect(20, 200, 591, 170))
-        self.txt_right.setMinimumSize(QtCore.QSize(0, 170))
-        self.txt_right.setMaximumSize(QtCore.QSize(16777215, 250))
-        self.txt_right.setStyleSheet("QPlainTextEdit {\n"
-"font-size: 14px;\n"
-"color: #000;\n"
-"font: 11pt \"微软雅黑\";\n"
-"background-color: #ffffff;\n"
-"border: 1px solid #cccccc;\n"
-"border-radius: 4px;\n"
-"}\n"
-"\n"
-"QPlainTextEdit:focus {\n"
-"border-color: #66afe9;\n"
-"outline: 0;\n"
-"}")
-        self.txt_right.setReadOnly(True)
-        self.txt_right.setObjectName("txt_right")
+        self.horizontalLayout.addWidget(self.btn_lower)
+        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem)
+        self.verticalLayout.addWidget(self.widget)
 
         self.retranslateUi(CaseConversion)
         QtCore.QMetaObject.connectSlotsByName(CaseConversion)
-        CaseConversion.setTabOrder(self.btn_upper, self.btn_lower)
 
     def retranslateUi(self, CaseConversion):
         _translate = QtCore.QCoreApplication.translate
         CaseConversion.setWindowTitle(_translate("CaseConversion", "Form"))
-        self.btn_upper.setText(_translate("CaseConversion", "全大写"))
-        self.btn_lower.setText(_translate("CaseConversion", "全小写"))
         self.txt_left.setPlaceholderText(_translate("CaseConversion", "Input:"))
         self.txt_right.setPlaceholderText(_translate("CaseConversion", "Output:"))
+        self.btn_upper.setText(_translate("CaseConversion", "全大写"))
+        self.btn_lower.setText(_translate("CaseConversion", "全小写"))
