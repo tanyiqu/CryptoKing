@@ -8,6 +8,7 @@ from PyQt5.QtGui import QMouseEvent, QColor, QPainter, QPainterPath, QBrush
 import Menu
 import config
 
+
 class MainForm(QWidget):
     # 在此定义变量
 
@@ -31,10 +32,10 @@ class MainForm(QWidget):
         # self.setWindowFlags(Qt.FramelessWindowHint | Qt.Window)
 
         # 设置按钮样式
-        self.mainForm.btn_close.setStyleSheet("QPushButton{border-image: url(resource/imgs/close_normal.png)}"
-                                              "QPushButton:hover{border-image: url(resource/imgs/close_hover.png)}")
-        self.mainForm.btn_min.setStyleSheet("QPushButton{border-image: url(resource/imgs/min_normal.png)}"
-                                            "QPushButton:hover{border-image: url(resource/imgs/min_hover.png)}")
+        # self.mainForm.btn_close.setStyleSheet("QPushButton{border-image: url(resource/imgs/close_normal.png)}"
+        #                                       "QPushButton:hover{border-image: url(resource/imgs/close_hover.png)}")
+        # self.mainForm.btn_min.setStyleSheet("QPushButton{border-image: url(resource/imgs/min_normal.png)}"
+        #                                     "QPushButton:hover{border-image: url(resource/imgs/min_hover.png)}")
 
         # self.mainForm.widget.setStyleSheet("QWidget#widget{background-image: url(resource/imgs/bg.png);background-size: cover;}")
         # self.mainForm.widget.setAutoFillBackground(True) #一定要加上
@@ -46,11 +47,11 @@ class MainForm(QWidget):
     # 设置窗口的功能
     def init_func(self):
         # 关闭按钮
-        self.mainForm.btn_close.clicked.connect(lambda: exit(0))
+        # self.mainForm.btn_close.clicked.connect(lambda: exit(0))
 
         # 最小化
-        self.mainForm.btn_min.clicked.connect(
-            lambda: self.setWindowState(Qt.WindowState.WindowMinimized))
+        # self.mainForm.btn_min.clicked.connect(
+        #     lambda: self.setWindowState(Qt.WindowState.WindowMinimized))
 
         # 实现窗口拖动
         self.set_move()
@@ -58,9 +59,8 @@ class MainForm(QWidget):
         # 注册菜单按钮
         Menu.register_menu_list(self.mainForm)
 
-
         # 测试按钮
-        self.mainForm.btn_search.clicked.connect(lambda: print(config._config))
+        # self.mainForm.btn_search.clicked.connect(lambda: print(config._config))
         pass
 
     # ##### 实现窗口拖动  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
